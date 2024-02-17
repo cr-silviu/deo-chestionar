@@ -1,0 +1,24 @@
+{
+  "cerere_racordare_loc_consum_non_casnic": {
+    "title": "01-03-01_P01-F02_Cerere de racordare - loc consum non casnic_rev06",
+    "anexe": [
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      { "annex": "copie_cui", "required": true },
+      { "annex": "act_de_proprietate", "required": true },
+      { "annex": "certificat_urbanism", "required": true },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "plan_de_situatie", "required": true },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": true }
+    ]
+  }
+}

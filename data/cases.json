@@ -54,7 +54,13 @@
     "title": "Sunteti un un agent economic ce doreste reamplasarea contorului."
   },
   "IP_CONSUMATOR_PJ_FLC": {
-    "title": "Sunteti imputernicit pentru un agent economic ce doreste o racordare noua."
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste o racordare noua.",
+    "annexes": [
+      {
+        "annex": "cerere_racordare_loc_consum_non_casnic"
+      },
+      { "annex": "imputernicire" }
+    ]
   },
   "FIP_CONSUMATOR_PJ_FLC": {
     "title": "Sunteti un un agent economic ce doreste o racordare noua."
@@ -98,19 +104,55 @@
   "FIP_PROSUMATOR_PE_SI_PF": {
     "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare."
   },
+  "IP_PROSUMATOR_PE_SI_PF": {
+    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare."
+  },
   "FIP_PROSUMATOR_PE_SI_PJ": {
     "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare."
+  },
+  "IP_PROSUMATOR_PE_SI_PJ": {
+    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare."
   },
   "FIP_PROSUMATOR_PE_BS_PF": {
     "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare."
   },
+  "IP_PROSUMATOR_PE_BS_PF": {
+    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare."
+  },
   "FIP_PROSUMATOR_PE_BS_PJ": {
     "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare."
+  },
+  "IP_PROSUMATOR_PE_BS_PJ": {
+    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare."
   },
   "FIP_PROSUMATOR_PE_MISC_PF": {
     "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
   },
+  "IP_PROSUMATOR_PE_MISC_PF": {
+    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+  },
   "FIP_PROSUMATOR_PE_MISC_PJ": {
     "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+  },
+  "IP_PROSUMATOR_PE_MISC_PJ": {
+    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+  },
+  "FIP_PRODUCATOR_FAA": {
+    "title": "Sunteti un producator ce doreste racordare si aviz de amplasament."
+  },
+  "IP_PRODUCATOR_FAA": {
+    "title": "Sunteti imputernicit pentru un producator ce doreste racordare si aviz de amplasament."
+  },
+  "FIP_PRODUCATOR_AA": {
+    "title": "Sunteti un producator ce doreste racordare."
+  },
+  "IP_PRODUCATOR_AA": {
+    "title": "Sunteti imputernicit un producator ce doreste racordare."
+  },
+  "IP_DEZVOLTATOR": {
+    "title": "Sunteti imputernicit sa depuneti documentele pentru un dezvoltator."
+  },
+  "FIP_DEZVOLTATOR": {
+    "title": "Sunteti un dezvoltator."
   }
 }

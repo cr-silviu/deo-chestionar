@@ -2,10 +2,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import classes from "./QuizComponent.module.scss";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import Questions from "@/data/questions.json";
 import Cases from "@/data/cases.json";
-import Image from "next/image";
 const QuizComponent = () => {
   const [open, setOpen] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -15,11 +15,15 @@ const QuizComponent = () => {
   const [stringArray, setStringArray] = useState<string[]>([]);
   const [finishState, setFinishState] = useState(false);
 
-  const closeModalHandler = () => {
+  const handleResetModal = () => {
     setStringArray([]);
     setFinishState(false);
     setQuestionsArray([Questions["SITUATIE_IMPUTERNICIRE"]]);
     setCurrentQuestionIndex(0);
+  };
+
+  const closeModalHandler = () => {
+    handleResetModal();
     setOpen(false);
   };
 
@@ -30,6 +34,20 @@ const QuizComponent = () => {
     }
     setQuestionsArray((prevState) => [...prevState, Questions[nextQuestion]]);
     setCurrentQuestionIndex(currentQuestionIndex + 1);
+  };
+
+  const handleBack = () => {
+    if (currentQuestionIndex === 1) return handleResetModal();
+
+    setCurrentQuestionIndex((prevState) => prevState - 1);
+    setStringArray((prevStringArray) =>
+      prevStringArray.filter(
+        (item, index) => index !== prevStringArray.length - 1
+      )
+    );
+    setQuestionsArray((prevState) =>
+      prevState.filter((item, index) => index !== prevState.length - 1)
+    );
   };
 
   useEffect(() => {
@@ -45,75 +63,106 @@ const QuizComponent = () => {
             onClick={() => closeModalHandler()}
             onKeyDown={() => closeModalHandler()}
           />
-          <div className={classes.modalCard}>
-            <div className={classes.modalTitle}>
-              <p className={classes.title}>Chestionar analiza tip utilizator</p>
-              <button
-                className={classes.closeIcon}
-                onClick={() => closeModalHandler()}
-                onKeyDown={() => closeModalHandler()}
-              >
-                X
-              </button>
+          <div className={classes.modalCardWrapper}>
+            <div className={classes.logoWrapper}>
+              <img
+                loading="lazy"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F12%2FGreen-Energy-PNG-Photo.png&f=1&nofb=1&ipt=7e00a0126c98be7b62269bd252c6385acd0ab63d9a3c9b7d26ee5199cf757e28&ipo=images"
+                alt="logo"
+              />
             </div>
-            {finishState ? (
-              <div className={classes.results}>
-                {/* <p className={classes.resultsTitle}>Sunteti:</p> */}
-                <p className={classes.resultsText}>{`${
-                  Cases[stringArray.join("_")]?.title
-                }`}</p>
+            <div className={classes.rotatingBackgroundWrapper}>
+              <div className={classes.rotatingBackground} />
+            </div>
+            <div className={classes.modalCard}>
+              <div className={classes.modalTitle}>
+                <p className={classes.title}>
+                  Chestionar analiza documente initiale
+                </p>
+                <X
+                  className={classes.closeIcon}
+                  onClick={() => closeModalHandler()}
+                  onKeyDown={() => closeModalHandler()}
+                />
               </div>
-            ) : (
-              <div className={classes.questionsWrapper}>
-                {questionsArray.map((question, indexQ) => (
-                  <div
-                    className={classes.question}
-                    style={{
-                      display:
-                        indexQ === currentQuestionIndex ? "block" : "none",
-                    }}
-                    key={indexQ}
+              <p className={classes.subtitle}>
+                Selectati cazurile care vi se aplica pentru a vedea documentele
+                initiale ce vor trebui depuse.
+              </p>
+              {finishState ? (
+                <div className={classes.results}>
+                  <p className={classes.resultsText}>{`${
+                    Cases[stringArray.join("_")]?.title
+                  }`}</p>
+                </div>
+              ) : (
+                <div className={classes.questionsWrapper}>
+                  {questionsArray.map((question, indexQ) => (
+                    <div
+                      className={classes.question}
+                      style={{
+                        display:
+                          indexQ === currentQuestionIndex ? "block" : "none",
+                      }}
+                      key={indexQ}
+                    >
+                      <div className={classes.questionTitle}>
+                        {question?.title}
+                      </div>
+                      <div className={classes.answersWrapperCases}>
+                        {question?.answers?.map((answer, index) => (
+                          <button
+                            className={classes.answerCard}
+                            key={index}
+                            onClick={() =>
+                              handleSelectAnswer(
+                                answer.value,
+                                answer.nextQuestion
+                              )
+                            }
+                            onKeyDown={() =>
+                              handleSelectAnswer(
+                                answer.value,
+                                answer.nextQuestion
+                              )
+                            }
+                          >
+                            <div className={classes.answerCardIcon}>
+                              {/* <Image /> */}
+                            </div>
+                            <div className={classes.answerCardTitle}>
+                              {answer.title}
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {!currentQuestionIndex || finishState ? null : (
+                <div className={classes.footer}>
+                  <button
+                    className={classes.backButton}
+                    onClick={() => handleBack()}
                   >
-                    <div className={classes.questionTitle}>
-                      {question?.title}
-                    </div>
-                    <div className={classes.answersWrapperCases}>
-                      {question?.answers?.map((answer, index) => (
-                        <button
-                          className={classes.answerCard}
-                          key={index}
-                          onClick={() =>
-                            handleSelectAnswer(
-                              answer.value,
-                              answer.nextQuestion
-                            )
-                          }
-                          onKeyDown={() =>
-                            handleSelectAnswer(
-                              answer.value,
-                              answer.nextQuestion
-                            )
-                          }
-                        >
-                          <div className={classes.answerCardIcon}>
-                            <Image
-                              className={classes.image}
-                              height={100}
-                              width={200}
-                              src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
-                              alt="placeholder"
-                            />
-                          </div>
-                          <div className={classes.answerCardTitle}>
-                            {answer.title}
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+                    <ChevronLeft />
+                    Inapoi
+                  </button>
+                </div>
+              )}
+              {!finishState ? null : (
+                <div
+                  className={classes.footer}
+                  style={{ alignItems: "center", justifyContent: "flex-end" }}
+                >
+                  <button className={classes.nextStepButton}>
+                    Incepe proces
+                    <ChevronRight />
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       ) : null}

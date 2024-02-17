@@ -35,22 +35,92 @@
 
 .backdrop {
   position: absolute;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
+
+  background: rgba(0, 0, 0, 0.1);
   height: 100%;
   width: 100%;
   z-index: 1;
+  cursor: default;
+}
+
+.modalCardWrapper {
+  z-index: 2;
+  border-radius: 5px;
+  min-width: 500px;
+  height: fit-content;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  max-width: calc(100% - 6rem);
+  max-width: 700px;
+  margin: 7rem 3rem 3rem 3rem;
+}
+
+.logoWrapper {
+  position: absolute;
+  top: -85px;
+  width: fit-content;
+  transform: rotate(55deg);
+
+  z-index: 200;
+  left: calc(80% - 50px);
+  margin: auto;
+  user-select: none;
+
+  img {
+    width: 150px;
+    object-fit: contain;
+    user-select: none;
+  }
+}
+
+.rotatingBackgroundWrapper {
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 4px;
+}
+.rotatingBackground {
+  background-image: linear-gradient(
+    var(--rotate),
+    rgba(230, 218, 218, 0.4),
+    rgba(39, 64, 70, 0.4)
+  );
+  width: 104%;
+  height: 102%;
+  top: -1%;
+  left: -2%;
+  animation: spin 10s linear infinite;
+  display: flex;
+  position: absolute;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
 
 .modalCard {
-  z-index: 2;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
   padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-  min-width: 500px;
-  height: fit-content;
-  margin-top: 5rem;
+  margin: 1rem;
+  border-radius: 3px;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .modalTitle {
@@ -58,12 +128,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 500;
   gap: 3rem;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+}
+.subtitle {
+  font-size: 0.8rem;
+  margin-right: 50px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .closeIcon {
@@ -77,21 +152,23 @@
   }
 }
 
+.questionsWrapper {
+  padding: 2rem 0;
+}
 .question {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 }
 
 .questionTitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .answersWrapperCases {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  padding: 0.5rem 0;
 }
 
 .answerCard {
@@ -99,14 +176,15 @@
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  flex: 1;
   padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     cursor: pointer;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    background-color: #99f2c8;
   }
 }
 
@@ -119,6 +197,7 @@
   width: 100%;
   object-fit: cover;
   border-radius: 3px;
+  user-select: none;
 }
 
 .answerCardTitle {
@@ -134,11 +213,11 @@
 }
 
 .results {
-  padding: 1rem 0;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
+  width: 100%;
 }
 
 .resultsTitle {
@@ -146,7 +225,46 @@
 
 .resultsText {
   font-size: 1.2rem;
-  font-weight: bold;
   text-align: center;
   padding: 0 3rem;
+  width: 100%;
+}
+
+.footer {
+  padding: 1rem 0 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+
+  .backButton {
+    all: unset;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+
+  .nextStepButton {
+    all: unset;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    background-color: #469771;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: #1b4d35;
+    }
+  }
 }

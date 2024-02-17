@@ -1,0 +1,62 @@
+{
+  "extras_carte_funciara": {
+    "title": "Extras carte funciara",
+    "description": "",
+    "details": "Se va atasa doar pentru terenul pe care se va amplasa obiectivul."
+  },
+  "act_de_identitate": {
+    "title": "Act de identitate",
+    "description": "",
+    "details": "Buletin sau carte de identitate."
+  },
+  "copie_cui": {
+    "title": "Copie cod unic de inregistrate fiscala(CUI)",
+    "description": "",
+    "details": ""
+  },
+  "act_de_proprietate": {
+    "title": "Actul de proprietate",
+    "description": "",
+    "details": ""
+  },
+  "certificat_de_urbanism": {
+    "title": "Certificatul de urbanism",
+    "description": "",
+    "details": ""
+  },
+  "fisa_tehnica_echipament_reincarcare": {
+    "title": "Fisa tehnica a echipamentului/statiei de reincarcare",
+    "description": "",
+    "details": ""
+  },
+  "aviz_de_amplasare": {
+    "title": "Avizul de amplasare",
+    "description": "Avizul de amplasare emis de autoritatea administratiei",
+    "details": ""
+  },
+  "autorizatie_de_construire": {
+    "title": "Autorizatie de construire",
+    "description": "",
+    "details": ""
+  },
+  "plan_de_situatie": {
+    "title": "Planul de situatie",
+    "description": "",
+    "details": ""
+  },
+  "extras_de_cont": {
+    "title": "Extras de cont",
+    "description": "",
+    "details": ""
+  },
+  "certificat_nomenclatura_stradala": {
+    "title": "Certificatul de nomenclatura stradala",
+    "description": "",
+    "details": ""
+  },
+  "imputernicire": {
+    "title": "Imputernicire",
+    "description": "",
+    "details": "Pentru atestarea calitatii de deponent"
+  }
+}

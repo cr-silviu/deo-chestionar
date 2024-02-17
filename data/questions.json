@@ -30,7 +30,8 @@
       },
       {
         "title": "Producator",
-        "value": "PRODUCATOR"
+        "value": "PRODUCATOR",
+        "nextQuestion": "IP_PRODUCATOR_AA"
       },
       {
         "title": "Dezvoltator",
@@ -53,7 +54,8 @@
       },
       {
         "title": "Producator",
-        "value": "PRODUCATOR"
+        "value": "PRODUCATOR",
+        "nextQuestion": "FIP_PRODUCATOR_AA"
       },
       {
         "title": "Dezvoltator",
@@ -129,7 +131,7 @@
     ]
   },
   "REQUIREMENTS_ONE_IP": {
-    "title": "Doreste:",
+    "title": "Persoana pentru care sunteti imputernicit doreste:",
     "answers": [
       { "title": "Spor de putere", "value": "SP" },
       { "title": "Aviz de amplasament", "value": "AA" },
@@ -315,6 +317,20 @@
         "value": "MISC",
         "nextQuestion": "IP_TIP_PERSOANA_PROSUMATOR"
       }
+    ]
+  },
+  "FIP_PRODUCATOR_AA": {
+    "title": "Aveti aviz de amplasament?",
+    "answers": [
+      { "title": "Da", "value": "AA" },
+      { "title": "Nu, doresc si aviz de amplasament", "value": "FAA" }
+    ]
+  },
+  "IP_PRODUCATOR_AA": {
+    "title": "Persoana pentru care depuneti documentele are aviz de amplasament?",
+    "answers": [
+      { "title": "Da", "value": "AA" },
+      { "title": "Nu, doreste si aviz de amplasament", "value": "FAA" }
     ]
   }
 }
