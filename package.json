@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "push": "git push https://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@github.com/cr-silviu/deo-chestionar.git/"
+    "push": "git push -u origin main"
   },
   "dependencies": {
     "next": "14.1.0",
