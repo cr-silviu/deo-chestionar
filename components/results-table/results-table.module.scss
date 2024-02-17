@@ -1,0 +1,83 @@
+.wrapper {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  .tableHeaderWrapper {
+    width: 100%;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    .tableHeaderTitle {
+      font-size: 0.8rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.tableWrapper {
+  width: 100%;
+  display: flex;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.table {
+  user-select: none;
+  width: 100%;
+  margin: 1rem 0;
+  .tHead {
+    .tHeadRow {
+      .th {
+        text-align: start;
+        font-size: 0.8rem;
+        font-weight: 400;
+        padding-left: 1rem;
+        position: sticky;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(16px);
+      }
+    }
+  }
+
+  .tBody {
+    .tBodyRow {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      .td {
+        padding: 0.25rem 0 0.25rem 1rem;
+        p {
+          font-size: 0.7rem;
+          color: rgba(0, 0, 0, 0.9);
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* width */
+.tableWrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.tableWrapper::-webkit-scrollbar-track {
+  background: hsl(152, 37%, 93%);
+  border-radius: 3px;
+}
+
+/* Handle */
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: hsl(152, 37%, 73%);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: hsl(152, 37%, 63%);
+}

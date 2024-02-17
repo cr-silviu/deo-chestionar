@@ -1,11 +1,13 @@
 // @ts-nocheck
 "use client";
 import React, { useState, useEffect } from "react";
-import classes from "./QuizComponent.module.scss";
+import classes from "./quiz-component.module.scss";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import Questions from "@/data/questions.json";
 import Cases from "@/data/cases.json";
+
+import ResultsTable from "@/components/results-table/results-table";
 const QuizComponent = () => {
   const [open, setOpen] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -50,10 +52,6 @@ const QuizComponent = () => {
     );
   };
 
-  useEffect(() => {
-    console.log(stringArray);
-  }, [stringArray]);
-
   return (
     <>
       {open ? (
@@ -94,6 +92,9 @@ const QuizComponent = () => {
                   <p className={classes.resultsText}>{`${
                     Cases[stringArray.join("_")]?.title
                   }`}</p>
+                  <ResultsTable
+                    documents={Cases[stringArray.join("_")]?.documents}
+                  />
                 </div>
               ) : (
                 <div className={classes.questionsWrapper}>
@@ -174,4 +175,4 @@ const QuizComponent = () => {
   );
 };
 
-export default QuizComponent;
+export { QuizComponent };

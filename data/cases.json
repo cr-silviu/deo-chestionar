@@ -55,15 +55,38 @@
   },
   "IP_CONSUMATOR_PJ_FLC": {
     "title": "Sunteti imputernicit pentru un agent economic ce doreste o racordare noua.",
-    "annexes": [
+    "documents": [
       {
-        "annex": "cerere_racordare_loc_consum_non_casnic"
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
       },
-      { "annex": "imputernicire" }
+
+      {
+        "document": "cerere_racordare_loc_consum_non_casnic_IP",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mari_consumatori",
+        "required": false
+      }
     ]
   },
   "FIP_CONSUMATOR_PJ_FLC": {
-    "title": "Sunteti un un agent economic ce doreste o racordare noua."
+    "title": "Sunteti un un agent economic ce doreste o racordare noua.",
+    "documents": [
+      {
+        "document": "cerere_racordare_loc_consum_non_casnic_FIP",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mari_consumatori",
+        "required": false
+      },
+      {
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
+      }
+    ]
   },
   "IP_PROSUMATOR_PN_FLC_PF": {
     "title": "Sunteti imputernicit pentru o persoana fizica ce doreste sa devina prosumator si sa se racordeze la retea."

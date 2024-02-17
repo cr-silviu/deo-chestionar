@@ -1,7 +1,34 @@
 {
-  "cerere_racordare_loc_consum_non_casnic": {
+  "cerere_racordare_loc_consum_non_casnic_IP": {
     "title": "01-03-01_P01-F02_Cerere de racordare - loc consum non casnic_rev06",
-    "anexe": [
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      { "annex": "copie_cui", "required": true },
+      { "annex": "act_de_proprietate", "required": true },
+      { "annex": "certificat_urbanism", "required": true },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "plan_de_situatie", "required": true },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": true },
+      { "annex": "imputernicire", "required": true }
+    ]
+  },
+  "cerere_racordare_loc_consum_non_casnic_FIP": {
+    "title": "01-03-01_P01-F02_Cerere de racordare - loc consum non casnic_rev06",
+    "description": "",
+    "details": "",
+    "annexes": [
       {
         "annex": "extras_carte_funciara",
         "required": false
@@ -20,5 +47,17 @@
       { "annex": "extras_de_cont", "required": true },
       { "annex": "certificat_nomenclatura_stradala", "required": true }
     ]
+  },
+  "chestionar_energetic_mici_consumatori": {
+    "title": "01-03-01_Chestionar enercetic - mici consumatori_rev06",
+    "description": "",
+    "detalii": "Consum mai mic de 100kW",
+    "annexes": []
+  },
+  "chestionar_energetic_mari_consumatori": {
+    "title": "01-03-01_P01-F04_Chestionar energeti - mari utilizatori_rev06",
+    "descritpion": "",
+    "details": "Consum mai mare de 100kW",
+    "annexes": []
   }
 }
