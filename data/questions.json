@@ -1,0 +1,320 @@
+{
+  "SITUATIE_IMPUTERNICIRE": {
+    "title": "Pentru cine doriti sa depuneti documentele?",
+    "answers": [
+      {
+        "title": "Pentru mine",
+        "value": "FIP",
+        "nextQuestion": "FIP_TIP_UTILIZATOR"
+      },
+      {
+        "title": "Pentru alticeva",
+        "value": "IP",
+        "nextQuestion": "IP_TIP_UTILIZATOR"
+      }
+    ],
+    "nextQuestion": "TIP_UTILIZATOR"
+  },
+  "IP_TIP_UTILIZATOR": {
+    "title": "Persoana pentru care doriti sa depuneti documentele este:",
+    "answers": [
+      {
+        "title": "Consumator",
+        "value": "CONSUMATOR",
+        "nextQuestion": "IP_TIP_PERSOANA_CONSUMATOR"
+      },
+      {
+        "title": "Prosumator",
+        "value": "PROSUMATOR",
+        "nextQuestion": "TIP_PROSUMATOR_IP"
+      },
+      {
+        "title": "Producator",
+        "value": "PRODUCATOR"
+      },
+      {
+        "title": "Dezvoltator",
+        "value": "DEZVOLTATOR"
+      }
+    ]
+  },
+  "FIP_TIP_UTILIZATOR": {
+    "title": "Sunt:",
+    "answers": [
+      {
+        "title": "Consumator",
+        "value": "CONSUMATOR",
+        "nextQuestion": "FIP_TIP_PERSOANA_CONSUMATOR"
+      },
+      {
+        "title": "Prosumator",
+        "value": "PROSUMATOR",
+        "nextQuestion": "TIP_PROSUMATOR_FIP"
+      },
+      {
+        "title": "Producator",
+        "value": "PRODUCATOR"
+      },
+      {
+        "title": "Dezvoltator",
+        "value": "DEZVOLTATOR"
+      }
+    ]
+  },
+  "IP_TIP_PERSOANA_CONSUMATOR": {
+    "title": "Persoana pentru care depuneti documentele este:",
+    "answers": [
+      {
+        "title": "Persoana fizica",
+        "value": "PF",
+        "nextQuestion": "PLACE_IP"
+      },
+      {
+        "title": "Persoana juridica",
+        "value": "PJ",
+        "nextQuestion": "PLACE_IP"
+      }
+    ]
+  },
+  "IP_TIP_PERSOANA_PROSUMATOR": {
+    "title": "Persoana pentru care depuneti documentele este:",
+    "answers": [
+      {
+        "title": "Persoana fizica",
+        "value": "PF",
+        "nextQuestion": ""
+      },
+      {
+        "title": "Persoana juridica",
+        "value": "PJ",
+        "nextQuestion": ""
+      }
+    ]
+  },
+  "FIP_TIP_PERSOANA_CONSUMATOR": {
+    "title": "Sunt:",
+    "answers": [
+      {
+        "title": "Persoana fizica",
+        "value": "PF",
+        "nextQuestion": "PLACE_FIP"
+      },
+      {
+        "title": "Persoana juridica",
+        "value": "PJ",
+        "nextQuestion": "PLACE_FIP"
+      }
+    ]
+  },
+  "FIP_TIP_PERSOANA_PROSUMATOR": {
+    "title": "Sunt:",
+    "answers": [
+      {
+        "title": "Persoana fizica",
+        "value": "PF",
+        "nextQuestion": ""
+      },
+      {
+        "title": "Persoana juridica",
+        "value": "PJ",
+        "nextQuestion": ""
+      }
+    ]
+  },
+  "PLACE_IP": {
+    "title": "Locul de consum exista?",
+    "answers": [
+      { "title": "Da", "value": "LC", "nextQuestion": "REQUIREMENTS_ONE_IP" },
+      { "title": "Nu", "value": "FLC" }
+    ]
+  },
+  "REQUIREMENTS_ONE_IP": {
+    "title": "Doreste:",
+    "answers": [
+      { "title": "Spor de putere", "value": "SP" },
+      { "title": "Aviz de amplasament", "value": "AA" },
+      { "title": "Reamplasare contor", "value": "RC" },
+      { "title": "Modificari administrative", "value": "MA" }
+    ]
+  },
+  "PLACE_FIP": {
+    "title": "Locul de consum exista?",
+    "answers": [
+      { "title": "Da", "value": "LC", "nextQuestion": "REQUIREMENTS_ONE_FIP" },
+      { "title": "Nu", "value": "FLC" }
+    ]
+  },
+  "REQUIREMENTS_ONE_FIP": {
+    "title": "Doresc:",
+    "answers": [
+      { "title": "Spor de putere", "value": "SP" },
+      { "title": "Aviz de amplasament", "value": "AA" },
+      { "title": "Reamplasare contor", "value": "RC" },
+      { "title": "Modificari administrative", "value": "MA" }
+    ]
+  },
+  "TIP_PROSUMATOR_IP": {
+    "title": "Persoana pentru care depun documentele:",
+    "answers": [
+      {
+        "title": "Doreste sa devina prosumator",
+        "value": "PN",
+        "nextQuestion": "LOC_CONSUM_PROSUMATOR_IP"
+      },
+      {
+        "title": "Este deja prosumator",
+        "value": "PE",
+        "nextQuestion": "REQUIREMENTS_TWO_IP"
+      }
+    ]
+  },
+  "TIP_PROSUMATOR_FIP": {
+    "title": "",
+    "answers": [
+      {
+        "title": "Dorestec sa devin prosumator",
+        "value": "PN",
+        "nextQuestion": "LOC_CONSUM_PROSUMATOR_FIP"
+      },
+      {
+        "title": "Sunt deja prosumator",
+        "value": "PE",
+        "nextQuestion": "REQUIREMENTS_TWO_FIP"
+      }
+    ]
+  },
+  "LOC_CONSUM_PROSUMATOR_IP": {
+    "title": "Locul de consum exista?",
+    "answers": [
+      {
+        "title": "Da",
+        "value": "LC",
+        "nextQuestion": "IP_TIP_PERSOANA_PROSUMATOR_LC"
+      },
+      {
+        "title": "Nu",
+        "value": "FLC",
+        "nextQuestion": "IP_TIP_PERSOANA_PROSUMATOR"
+      }
+    ]
+  },
+  "LOC_CONSUM_PROSUMATOR_FIP": {
+    "title": "Locul de consum exista?",
+    "answers": [
+      {
+        "title": "Da",
+        "value": "LC",
+        "nextQuestion": "FIP_TIP_PERSOANA_PROSUMATOR_LC"
+      },
+      {
+        "title": "Nu",
+        "value": "FLC",
+        "nextQuestion": "FIP_TIP_PERSOANA_PROSUMATOR"
+      }
+    ]
+  },
+  "IP_TIP_PERSOANA_PROSUMATOR_LC": {
+    "title": "Persoana pentru care depuneti documentele este:",
+    "answers": [
+      {
+        "title": "Persoana fizica",
+        "value": "PF",
+        "nextQuestion": "IP_ALEGERE_FINANTARE_AFM"
+      },
+      {
+        "title": "Persoana juridica",
+        "value": "PJ",
+        "nextQuestion": "IP_ALEGERE_FINANTARE_ELECTRIC_UP"
+      }
+    ]
+  },
+  "FIP_TIP_PERSOANA_PROSUMATOR_LC": {
+    "title": "Sunt:",
+    "answers": [
+      {
+        "title": "Persoana fizica",
+        "value": "PF",
+        "nextQuestion": "FIP_ALEGERE_FINANTARE_AFM"
+      },
+      {
+        "title": "Persoana juridica",
+        "value": "PJ",
+        "nextQuestion": "FIP_ALEGERE_FINANTARE_ELECTRIC_UP"
+      }
+    ]
+  },
+
+  "IP_ALEGERE_FINANTARE_AFM": {
+    "title": "Persoana pentru care depuneti documentele doreste finantare prin AFM?",
+    "answers": [
+      { "title": "Da", "value": "AFM", "nextQuestion": "" },
+
+      { "title": "Nu", "value": "FAFM", "nextQuestion": "" }
+    ]
+  },
+
+  "IP_ALEGERE_FINANTARE_ELECTRIC_UP": {
+    "title": "Persoana pentru care depuneti documentele doreste finantare prin Electric UP?",
+    "answers": [
+      { "title": "Da", "value": "EUP", "nextQuestion": "" },
+
+      { "title": "Nu", "value": "FEUP", "nextQuestion": "" }
+    ]
+  },
+  "FIP_ALEGERE_FINANTARE_AFM": {
+    "title": "Doresc finantare prin AFM?",
+    "answers": [
+      { "title": "Da", "value": "AFM", "nextQuestion": "" },
+
+      { "title": "Nu", "value": "FAFM", "nextQuestion": "" }
+    ]
+  },
+  "FIP_ALEGERE_FINANTARE_ELECTRIC_UP": {
+    "title": "Doresc finantare prin Electric UP?",
+    "answers": [
+      { "title": "Da", "value": "EUP", "nextQuestion": "" },
+
+      { "title": "Nu", "value": "FEUP", "nextQuestion": "" }
+    ]
+  },
+  "REQUIREMENTS_TWO_FIP": {
+    "title": "Doresc:",
+    "answers": [
+      {
+        "title": "Montare statie/statii de incarcare",
+        "value": "SI",
+        "nextQuestion": "FIP_TIP_PERSOANA_PROSUMATOR"
+      },
+      {
+        "title": "Montare baterii de stocare",
+        "value": "BS",
+        "nextQuestion": "FIP_TIP_PERSOANA_PROSUMATOR"
+      },
+      {
+        "title": "Marire putere evacuata, numar panouri sau invertor",
+        "value": "MISC",
+        "nextQuestion": "FIP_TIP_PERSOANA_PROSUMATOR"
+      }
+    ]
+  },
+  "REQUIREMENTS_TWO_IP": {
+    "title": "Persoana pentru care depuneti documentele doreste:",
+    "answers": [
+      {
+        "title": "Montare statie/statii de incarcare",
+        "value": "SI",
+        "nextQuestion": "IP_TIP_PERSOANA_PROSUMATOR"
+      },
+      {
+        "title": "Montare baterii de stocare",
+        "value": "BS",
+        "nextQuestion": "IP_TIP_PERSOANA_PROSUMATOR"
+      },
+      {
+        "title": "Marire putere evacuata, numar panouri sau invertor",
+        "value": "MISC",
+        "nextQuestion": "IP_TIP_PERSOANA_PROSUMATOR"
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "IP_CONSUMATOR_PF_LC_SP": {
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste spor de putere."
+  },
+  "IP_CONSUMATOR_PF_LC_AA": {
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste un aviz de amplasament."
+  },
+  "IP_CONSUMATOR_PF_LC_MA": {
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste modificari administrative."
+  },
+  "IP_CONSUMATOR_PF_LC_RC": {
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste reamplasarea contorului."
+  },
+  "FIP_CONSUMATOR_PF_LC_SP": {
+    "title": "Sunteti un utilizator casnic ce doreste spor de putere."
+  },
+  "FIP_CONSUMATOR_PF_LC_AA": {
+    "title": "Sunteti un utilizator casnic ce doreste un aviz de amplasament."
+  },
+  "FIP_CONSUMATOR_PF_LC_MA": {
+    "title": "Sunteti un utilizator casnic ce doreste modificari administrative."
+  },
+  "FIP_CONSUMATOR_PF_LC_RC": {
+    "title": "Sunteti un utilizator casnic ce doreste reamplasarea contorului."
+  },
+  "IP_CONSUMATOR_PF_FLC": {
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste o racordare noua."
+  },
+  "FIP_CONSUMATOR_PF_FLC": {
+    "title": "Sunteti un utilizator casnic ce doreste o racordare noua."
+  },
+  "IP_CONSUMATOR_PJ_LC_SP": {
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste spor de putere."
+  },
+  "IP_CONSUMATOR_PJ_LC_AA": {
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste un aviz de amplasament."
+  },
+  "IP_CONSUMATOR_PJ_LC_MA": {
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste modificari administrative."
+  },
+  "IP_CONSUMATOR_PJ_LC_RC": {
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste reamplasarea contorului."
+  },
+  "FIP_CONSUMATOR_PJ_LC_SP": {
+    "title": "Sunteti un agent economic ce doreste spor de putere."
+  },
+  "FIP_CONSUMATOR_PJ_LC_AA": {
+    "title": "Sunteti un agent economic ce doreste un aviz de amplasament."
+  },
+  "FIP_CONSUMATOR_PJ_LC_MA": {
+    "title": "Sunteti un agent economic ce doreste modificari administrative."
+  },
+  "FIP_CONSUMATOR_PJ_LC_RC": {
+    "title": "Sunteti un un agent economic ce doreste reamplasarea contorului."
+  },
+  "IP_CONSUMATOR_PJ_FLC": {
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste o racordare noua."
+  },
+  "FIP_CONSUMATOR_PJ_FLC": {
+    "title": "Sunteti un un agent economic ce doreste o racordare noua."
+  },
+  "IP_PROSUMATOR_PN_FLC_PF": {
+    "title": "Sunteti imputernicit pentru o persoana fizica ce doreste sa devina prosumator si sa se racordeze la retea."
+  },
+  "FIP_PROSUMATOR_PN_FLC_PJ": {
+    "title": "Sunteti o persoana juridica ce doreste sa devina prosumator si sa se racordeze la retea."
+  },
+  "IP_PROSUMATOR_PN_FLC_PJ": {
+    "title": "Sunteti imputernicit pentru o persoana juridica ce doreste sa devina prosumator si sa se racordeze la retea."
+  },
+  "IP_PROSUMATOR_PN_LC_PF_AFM": {
+    "title": "Sunteti imputernicit pentru o persoana fizica doritoare sa devina prosumator si sa acceseze programul AFM."
+  },
+  "IP_PROSUMATOR_PN_LC_PJ_EUP": {
+    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP."
+  },
+  "FIP_PROSUMATOR_PN_LC_PF_AFM": {
+    "title": "Sunteti o persoana fizica doritoare sa devina prosumator si sa acceseze programul AFM."
+  },
+  "FIP_PROSUMATOR_PN_LC_PJ_EUP": {
+    "title": "Sunteti o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP."
+  },
+  "FIP_PROSUMATOR_PN_FLC_PF": {
+    "title": "Sunteti o persoana fizica doritoare sa devina prosumator si sa se racordeze la retea."
+  },
+  "FIP_PROSUMATOR_PN_LC_PJ_FEUP": {
+    "title": "Sunteti o persoana juridica doritoare sa devina prosumator."
+  },
+  "FIP_PROSUMATOR_PN_LC_PF_FAFM": {
+    "title": "Sunteti o persoana juridica doritoare sa devina prosumator."
+  },
+  "IP_PROSUMATOR_PN_LC_PJ_FEUP": {
+    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator."
+  },
+  "IP_PROSUMATOR_PN_LC_PF_FAFM": {
+    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator."
+  },
+  "FIP_PROSUMATOR_PE_SI_PF": {
+    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare."
+  },
+  "FIP_PROSUMATOR_PE_SI_PJ": {
+    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare."
+  },
+  "FIP_PROSUMATOR_PE_BS_PF": {
+    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare."
+  },
+  "FIP_PROSUMATOR_PE_BS_PJ": {
+    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare."
+  },
+  "FIP_PROSUMATOR_PE_MISC_PF": {
+    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+  },
+  "FIP_PROSUMATOR_PE_MISC_PJ": {
+    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+  }
+}
