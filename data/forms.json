@@ -4,6 +4,7 @@
     "description": "",
     "details": "",
     "annexes": [
+      { "annex": "imputernicire", "required": true },
       {
         "annex": "extras_carte_funciara",
         "required": false
@@ -20,8 +21,7 @@
       { "annex": "autorizatie_de_construire", "required": false },
       { "annex": "plan_de_situatie", "required": true },
       { "annex": "extras_de_cont", "required": true },
-      { "annex": "certificat_nomenclatura_stradala", "required": true },
-      { "annex": "imputernicire", "required": true }
+      { "annex": "certificat_nomenclatura_stradala", "required": true }
     ]
   },
   "cerere_racordare_loc_consum_non_casnic_FIP": {
@@ -48,16 +48,797 @@
       { "annex": "certificat_nomenclatura_stradala", "required": true }
     ]
   },
+  "cerere_racordare_loc_consum_casnic_IP": {
+    "title": "01-03-01_P01-F01_Cerere de racordare - loc consum casnic_rev_06",
+    "description": "",
+    "details": "",
+    "annexes": [
+      { "annex": "imputernicire", "required": true },
+      { "annex": "extras_carte_funciara", "required": false },
+      { "annex": "act_de_identitate", "required": true },
+      { "annex": "act_de_proprietate", "required": false },
+      { "annex": "certificat_urbanism", "required": true },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "plan_de_situatie", "required": true },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": false },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      { "annex": "declaratie_proprie_raspundere", "required": false }
+    ]
+  },
+  "cerere_racordare_loc_consum_casnic_FIP": {
+    "title": "01-03-01_P01-F01_Cerere de racordare - loc consum casnic_rev_06",
+    "description": "",
+    "details": "",
+    "annexes": [
+      { "annex": "extras_carte_funciara", "required": false },
+      { "annex": "act_de_identitate", "required": true },
+      { "annex": "act_de_proprietate", "required": false },
+      { "annex": "certificat_urbanism", "required": true },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "plan_de_situatie", "required": true },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": false },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      { "annex": "declaratie_proprie_raspundere", "required": false }
+    ]
+  },
+
   "chestionar_energetic_mici_consumatori": {
     "title": "01-03-01_Chestionar enercetic - mici consumatori_rev06",
     "description": "",
-    "detalii": "Consum mai mic de 100kW",
+    "details": "Consum mai mic de 100kW",
     "annexes": []
   },
   "chestionar_energetic_mari_consumatori": {
     "title": "01-03-01_P01-F04_Chestionar energeti - mari utilizatori_rev06",
     "descritpion": "",
     "details": "Consum mai mare de 100kW",
+    "annexes": []
+  },
+  "calculator_energetic": {
+    "title": "Calculator de putere",
+    "description": "",
+    "details": "",
+    "annexes": []
+  },
+  "cerere_actualizare_atr_loc_consum_casnic_IP": {
+    "title": "01-03-01_P01-F05_Cerere-actualizare-ATR-loc-consum-casnic_rev07",
+    "description": "",
+    "details": "Pana in 30kW alimentare din retea, peste 30kW cu alta solutie de racordare.",
+    "annexes": [
+      { "annex": "imputernicire", "required": true },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      { "annex": "certificat_urbanism", "required": false },
+      { "annex": "extras_carte_funciara", "required": true },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": false },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      { "annex": "declaratie_proprie_raspundere", "required": false }
+    ]
+  },
+  "cerere_actualizare_atr_loc_consum_casnic_FIP": {
+    "title": "01-03-01_P01-F05_Cerere-actualizare-ATR-loc-consum-casnic_rev07",
+    "description": "",
+    "details": "Pana in 30kW alimentare din retea, peste 30kW cu alta solutie de racordare.",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      { "annex": "certificat_urbanism", "required": false },
+      { "annex": "extras_carte_funciara", "required": true },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": false },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      { "annex": "declaratie_proprie_raspundere", "required": false }
+    ]
+  },
+  "cerere_actualizare_atr_loc_consum_noncasnic_IP": {
+    "title": "01-03-01_P01-F06_cerere-actualizare-ATR--loc-consum-noncasnic_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      { "annex": "imputernicire", "required": true },
+      { "annex": "act_de_identitate", "required": true },
+      { "annex": "copie_cui", "required": true },
+      { "annex": "act_de_proprietate", "required": true },
+      { "annex": "plan_de_situatie", "required": false },
+      { "annex": "certificat_urbanism", "required": false },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "extras_carte_funciara", "required": false },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": false }
+    ]
+  },
+  "cerere_actualizare_atr_loc_consum_noncasnic_FIP": {
+    "title": "01-03-01_P01-F06_cerere-actualizare-ATR--loc-consum-noncasnic_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      { "annex": "act_de_identitate", "required": true },
+      { "annex": "copie_cui", "required": true },
+      { "annex": "act_de_proprietate", "required": true },
+      { "annex": "plan_de_situatie", "required": false },
+      { "annex": "certificat_urbanism", "required": false },
+      { "annex": "fisa_tehnica_echipament_reincarcare", "required": false },
+      { "annex": "aviz_de_amplasare", "required": false },
+      { "annex": "extras_carte_funciara", "required": false },
+      { "annex": "autorizatie_de_construire", "required": false },
+      { "annex": "extras_de_cont", "required": true },
+      { "annex": "certificat_nomenclatura_stradala", "required": false }
+    ]
+  },
+  "cerere_chestionar_pentru_obtinerea_AA_AC_casnic_IP": {
+    "title": "01-03-01_P02-F07_CerereChestPtObtAA_AC_casnic_rev02",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      { "annex": "certificat_urbanism", "required": true },
+      { "annex": "plan_incadrare_teritoriu", "required": true },
+      { "annex": "plan_de_situatie", "required": true },
+      { "annex": "plan_constructii_subterane", "required": false },
+      { "annex": "memoriu_tehnic", "required": false },
+      { "annex": "certificat_nomenclatura_stradala", "required": "false" },
+      { "annex": "studiu_coexistenta", "required": false },
+      { "annex": "analiza_risc", "required": false },
+      { "annex": "autorizatie_functionare", "required": false }
+    ]
+  },
+  "cerere_chestionar_pentru_obtinerea_AA_AC_casnic_FIP": {
+    "title": "01-03-01_P02-F07_CerereChestPtObtAA_AC_casnic_rev02",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      { "annex": "certificat_urbanism", "required": true },
+      { "annex": "plan_incadrare_teritoriu", "required": true },
+      { "annex": "plan_de_situatie", "required": true },
+      { "annex": "plan_constructii_subterane", "required": false },
+      { "annex": "memoriu_tehnic", "required": false },
+      { "annex": "certificat_nomenclatura_stradala", "required": "false" },
+      { "annex": "studiu_coexistenta", "required": false },
+      { "annex": "analiza_risc", "required": false },
+      { "annex": "autorizatie_functionare", "required": false }
+    ]
+  },
+  "cerere_chestionar_pentru_obtinerea_AA_AC_non_casnic_IP": {
+    "title": "01-03-01_P02-F01_CerereChestPtObtAA_AC_noncasnic_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": true
+      },
+      {
+        "annex": "plan_incadrare_teritoriu",
+        "required": true
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": true
+      },
+      {
+        "annex": "plan_constructii_subterane",
+        "required": false
+      },
+      {
+        "annex": "memoriu_tehnic",
+        "required": false
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      },
+      {
+        "annex": "studiu_coexistenta",
+        "required": false
+      },
+      {
+        "annex": "analiza_risc",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_functionare",
+        "required": false
+      }
+    ]
+  },
+  "cerere_chestionar_pentru_obtinerea_AA_AC_non_casnic_FIP": {
+    "title": "01-03-01_P02-F01_CerereChestPtObtAA_AC_noncasnic_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": true
+      },
+      {
+        "annex": "plan_incadrare_teritoriu",
+        "required": true
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": true
+      },
+      {
+        "annex": "plan_constructii_subterane",
+        "required": false
+      },
+      {
+        "annex": "memoriu_tehnic",
+        "required": false
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      },
+      {
+        "annex": "studiu_coexistenta",
+        "required": false
+      },
+      {
+        "annex": "analiza_risc",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_functionare",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_IP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      {
+        "annex": "declaratie_proprie_raspundere",
+        "required": false
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_FIP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      {
+        "annex": "declaratie_proprie_raspundere",
+        "required": false
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_FIP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "certificat_constatator",
+        "required": false
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      {
+        "annex": "declaratie_proprie_raspundere",
+        "required": false
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_IP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "certificat_constatator",
+        "required": false
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      {
+        "annex": "declaratie_proprie_raspundere",
+        "required": false
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PF_FIP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "proces_verbal_confirmare_receptie",
+        "required": true
+      },
+      {
+        "annex": "buletin_incercare_priza_pamant",
+        "required": true
+      },
+      {
+        "annex": "certificat_conformitate_invertor",
+        "required": true
+      },
+      {
+        "annex": "fisa_tehnica_invertor",
+        "required": true
+      },
+      {
+        "annex": "schema_evelcrica_monofilara_instalatie_producere",
+        "required": true
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PF_IP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "proces_verbal_confirmare_receptie",
+        "required": true
+      },
+      {
+        "annex": "buletin_incercare_priza_pamant",
+        "required": true
+      },
+      {
+        "annex": "certificat_conformitate_invertor",
+        "required": true
+      },
+      {
+        "annex": "fisa_tehnica_invertor",
+        "required": true
+      },
+      {
+        "annex": "schema_evelcrica_monofilara_instalatie_producere",
+        "required": true
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PJ_FIP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      { "annex": "certificat_constatator", "required": true },
+      {
+        "annex": "proces_verbal_confirmare_receptie",
+        "required": true
+      },
+      {
+        "annex": "buletin_incercare_priza_pamant",
+        "required": true
+      },
+      {
+        "annex": "certificat_conformitate_invertor",
+        "required": true
+      },
+      {
+        "annex": "fisa_tehnica_invertor",
+        "required": true
+      },
+      {
+        "annex": "schema_evelcrica_monofilara_instalatie_producere",
+        "required": true
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PJ_IP": {
+    "title": "01-03-01_P03-F16_Cerere de racordare prosumatori_LC noi sau spor putere_anexa1_rev05",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      { "annex": "certificat_constatator", "required": true },
+      {
+        "annex": "proces_verbal_confirmare_receptie",
+        "required": true
+      },
+      {
+        "annex": "buletin_incercare_priza_pamant",
+        "required": true
+      },
+      {
+        "annex": "certificat_conformitate_invertor",
+        "required": true
+      },
+      {
+        "annex": "fisa_tehnica_invertor",
+        "required": true
+      },
+      {
+        "annex": "schema_evelcrica_monofilara_instalatie_producere",
+        "required": true
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordate_prosumator_LC_EXISTENT_AFM_anexa4_PF_FIP": {
+    "title": "01-03-01_P03-F15_Cerere de racordare prosumator pt LC existent care acceseaza programul AFM_anexa4_rev03",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      {
+        "annex": "declaratie_proprie_raspundere",
+        "required": false
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordate_prosumator_LC_EXISTENT_AFM_anexa4_PF_IP": {
+    "title": "01-03-01_P03-F15_Cerere de racordare prosumator pt LC existent care acceseaza programul AFM_anexa4_rev03",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "adeverinta_eliberata_administratia_publica",
+        "required": false
+      },
+      {
+        "annex": "declaratie_proprie_raspundere",
+        "required": false
+      },
+      {
+        "annex": "fisa_reglaje_protectii_instalatie",
+        "required": false
+      },
+      {
+        "annex": "dispozitie_reglaje_protectii_DEO",
+        "required": false
+      }
+    ]
+  },
+  "chestionar_evergetic_producatori_prosumatori": {
+    "title": "01-03-01_P03-F04_Chestionar energetic - producatori_prosumatori_rev07",
+    "description": "",
+    "details": "",
     "annexes": []
   }
 }

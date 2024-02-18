@@ -5,7 +5,7 @@ import classes from "./results-table.module.scss";
 import forms from "@/data/forms.json";
 import annexes from "@/data/form_annexes.json";
 
-import { ClipboardType, Download, FileUp } from "lucide-react";
+import { ClipboardType, FileUp } from "lucide-react";
 
 interface DocumentProps {
   document: string;
@@ -37,16 +37,35 @@ const ResultsTable = (props: Props) => {
       required: item.required,
     }));
 
-    // const populatedDocumentsArray = documentsArray.map((document)=>({...document, annexes:item.annexes.map((annex)=> {... annexes[annex.annex], required:annex.required }) })))
-    const populatedDocumentsArray = documentsArray?.map((document) => ({
-      ...document,
-      annexes: document?.annexes?.map(
-        (annex: { annex: string; required: boolean }) => ({
-          ...annexes[annex?.annex],
-          required: annex?.required,
-        })
-      ),
-    }));
+    let existingAnnexesArray = [];
+
+    const populatedDocumentsArray = documentsArray
+      ?.map((document) => ({
+        ...document,
+        annexes: document?.annexes?.map(
+          (annex: { annex: string; required: boolean }) => ({
+            ...annexes[annex?.annex],
+            required: annex?.required,
+          })
+        ),
+      }))
+      ?.map((document) => ({
+        ...document,
+        annexes: document?.annexes?.map((annex) => {
+          if (existingAnnexesArray?.includes(annex?.title)) {
+            return {
+              ...annex,
+              exists: true,
+            };
+          } else {
+            existingAnnexesArray?.push(annex?.title);
+            return {
+              ...annex,
+              exists: false,
+            };
+          }
+        }),
+      }));
 
     setDocumentsArray(populatedDocumentsArray);
   }, []);
@@ -77,16 +96,35 @@ const ResultsTable = (props: Props) => {
                   <>
                     <tr className={classes.tBodyRow} key={index}>
                       <td className={classes.td}>
-                        <ClipboardType size={16} style={{ color: "#469771" }} />
+                        <ClipboardType
+                          size={16}
+                          style={
+                            item?.required
+                              ? { color: "#469771" }
+                              : { color: "hsla(151, 36%, 43%,0.4)" }
+                          }
+                        />
                       </td>
-                      <td className={classes.td}>
+                      <td
+                        className={classes.td}
+                        style={
+                          item?.required
+                            ? { color: "rgba(0,0,0,0.9)" }
+                            : { color: "rgba(0,0,0,0.4)" }
+                        }
+                      >
                         <p>
                           <span>{item.title}</span>
                         </p>
                       </td>
                       <td
                         className={classes.td}
-                        style={{ width: "fit-content" }}
+                        style={
+                          ({ width: "fit-content" },
+                          item?.required
+                            ? { color: "rgba(0,0,0,0.9)" }
+                            : { color: "rgba(0,0,0,0.4)" })
+                        }
                       >
                         <p>
                           <span>Formular</span>
@@ -94,26 +132,89 @@ const ResultsTable = (props: Props) => {
                       </td>
                       <td
                         className={classes.td}
-                        style={{ width: "fit-content" }}
+                        style={
+                          ({ width: "fit-content" },
+                          item?.required
+                            ? { color: "rgba(0,0,0,0.9)" }
+                            : { color: "rgba(0,0,0,0.4)" })
+                        }
                       >
                         <p>
                           <span>{item.required ? "Da" : "Nu"}</span>
                         </p>
                       </td>
                     </tr>
-                    {item.annexes.map((annex, index) => (
+                    {item?.annexes?.map((annex, index) => (
                       <tr className={classes.tBodyRow} key={index}>
                         <td className={classes.td}>
-                          <FileUp size={16} style={{ color: "#ffa3a3" }} />
+                          <FileUp
+                            size={16}
+                            style={
+                              annex?.required
+                                ? { color: "#ffa3a3" }
+                                : {
+                                    color:
+                                      "hsla(0, 100%, 81.96078431372548%,0.5)",
+                                  }
+                            }
+                          />
                         </td>
-                        <td className={classes.td}>
-                          <p>{annex.title ?? ""}</p>
+                        <td
+                          className={classes.td}
+                          style={
+                            ({ width: "fit-content" },
+                            annex?.required
+                              ? { color: "rgba(0,0,0,0.9)" }
+                              : { color: "rgba(0,0,0,0.4)" })
+                          }
+                        >
+                          <p
+                            style={
+                              annex?.exists
+                                ? { textDecoration: "line-through" }
+                                : {}
+                            }
+                          >
+                            {annex.title ?? ""}
+                          </p>
                         </td>
-                        <td className={classes.td}>
-                          <p>Anexa</p>
+                        <td
+                          className={classes.td}
+                          style={
+                            ({ width: "fit-content" },
+                            annex?.required
+                              ? { color: "rgba(0,0,0,0.9)" }
+                              : { color: "rgba(0,0,0,0.4)" })
+                          }
+                        >
+                          <p
+                            style={
+                              annex?.exists
+                                ? { textDecoration: "line-through" }
+                                : {}
+                            }
+                          >
+                            Anexa
+                          </p>
                         </td>
-                        <td className={classes.td}>
-                          <p>{annex.required ? "Da" : "Nu"}</p>
+                        <td
+                          className={classes.td}
+                          style={
+                            ({ width: "fit-content" },
+                            annex?.required
+                              ? { color: "rgba(0,0,0,0.9)" }
+                              : { color: "rgba(0,0,0,0.4)" })
+                          }
+                        >
+                          <p
+                            style={
+                              annex?.exists
+                                ? { textDecoration: "line-through" }
+                                : {}
+                            }
+                          >
+                            {annex.required ? "Da" : "Nu"}
+                          </p>
                         </td>
                       </tr>
                     ))}

@@ -58,5 +58,85 @@
     "title": "Imputernicire",
     "description": "",
     "details": "Pentru atestarea calitatii de deponent"
+  },
+  "adeverinta_eliberata_administratia_publica": {
+    "title": "Adeverinta eliberata de administratia publica locala",
+    "description": "",
+    "details": "Se prezinta in lipsa actului de proprietate."
+  },
+  "declaratie_proprie_raspundere": {
+    "title": "Declaratie pe proprie raspundere  autentificata notarial",
+    "description": "",
+    "details": "Se prezinta in lipsa actului de proprietate."
+  },
+  "plan_incadrare_teritoriu": {
+    "title": "Plan de incadrare in teritoriu",
+    "description": "",
+    "details": ""
+  },
+  "plan_constructii_subterane": {
+    "title": "Plan privind consctructiile subterane",
+    "description": "",
+    "details": "Doar in cazul in care exista constructii subterane."
+  },
+  "memoriu_tehnic": {
+    "title": "Memoriu tehnic",
+    "description": "",
+    "details": "In cazul in care obiectivul pentru care se solicita avizul de amplasament este un proiect tip infrastructura de transport transeuropeana."
+  },
+  "studiu_coexistenta": {
+    "title": "Studiu de coexistenta",
+    "description": "",
+    "details": ""
+  },
+  "analiza_risc": {
+    "title": "Analiza de risc",
+    "description": "",
+    "details": ""
+  },
+  "autorizatie_functionare": {
+    "title": "Autorizatie de functionare",
+    "description": "",
+    "details": ""
+  },
+  "fisa_reglaje_protectii_instalatie": {
+    "title": "Fisa de reglaje protectii din instalatie",
+    "description": "",
+    "details": "Pentru prosumatorii racordati la reteaua de JT"
+  },
+  "dispozitie_reglaje_protectii_DEO": {
+    "title": "Dispozitie de reglaje protectii la DEO SA",
+    "description": "",
+    "details": ""
+  },
+  "certificat_constatator": {
+    "title": "Certificat constatator",
+    "description": "",
+    "details": ""
+  },
+  "proces_verbal_confirmare_receptie": {
+    "title": "PV confirmare receptie la termen a lucrarii",
+    "description": "",
+    "details": "Proces verbal care confirma receptia la termen a lucrarii aferente instalatiei de producere a energiei electrice."
+  },
+  "buletin_incercare_priza_pamant": {
+    "title": "Buletin de incercare a prizei de pamant",
+    "description": "",
+    "details": ""
+  },
+  "certificat_conformitate_invertor": {
+    "title": "Certificat de conformitatea a invertorului",
+    "description": "",
+    "details": ""
+  },
+  "fisa_tehnica_invertor": {
+    "title": "Fisa tehnica a invertorului",
+    "description": "",
+    "details": ""
+  },
+  "schema_evelcrica_monofilara_instalatie_producere": {
+    "title": "Schema electrica monofilara a instalatiei de producere",
+    "description": "",
+    "details": ""
   }
 }

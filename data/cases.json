@@ -1,69 +1,220 @@
 {
   "IP_CONSUMATOR_PF_LC_SP": {
-    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste spor de putere."
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste spor de putere.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_casnic_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PF_LC_AA": {
-    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste un aviz de amplasament."
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste un aviz de amplasament.",
+    "documents": [
+      {
+        "document": "cerere_chestionar_pentru_obtinerea_AA_AC_casnic_IP",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PF_LC_MA": {
-    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste modificari administrative."
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste modificari administrative.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_casnic_IP",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PF_LC_RC": {
-    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste reamplasarea contorului."
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste reamplasarea contorului.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_casnic_IP",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PF_LC_SP": {
-    "title": "Sunteti un utilizator casnic ce doreste spor de putere."
+    "title": "Sunteti un utilizator casnic ce doreste spor de putere.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_casnic_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PF_LC_AA": {
-    "title": "Sunteti un utilizator casnic ce doreste un aviz de amplasament."
+    "title": "Sunteti un utilizator casnic ce doreste un aviz de amplasament.",
+    "documents": [
+      {
+        "document": "cerere_chestionar_pentru_obtinerea_AA_AC_casnic_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PF_LC_MA": {
-    "title": "Sunteti un utilizator casnic ce doreste modificari administrative."
+    "title": "Sunteti un utilizator casnic ce doreste modificari administrative.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_casnic_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PF_LC_RC": {
-    "title": "Sunteti un utilizator casnic ce doreste reamplasarea contorului."
+    "title": "Sunteti un utilizator casnic ce doreste reamplasarea contorului.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_casnic_FIP",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PF_FLC": {
-    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste o racordare noua."
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste o racordare noua.",
+    "documents": [
+      {
+        "document": "cerere_racordare_loc_consum_casnic_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
+      },
+      {
+        "document": "chestionar_energetic_mari_consumatori",
+        "required": false
+      }
+    ]
   },
   "FIP_CONSUMATOR_PF_FLC": {
-    "title": "Sunteti un utilizator casnic ce doreste o racordare noua."
+    "title": "Sunteti un utilizator casnic ce doreste o racordare noua.",
+    "documents": [
+      {
+        "document": "cerere_racordare_loc_consum_casnic_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
+      },
+      {
+        "document": "chestionar_energetic_mari_consumatori",
+        "required": false
+      }
+    ]
   },
   "IP_CONSUMATOR_PJ_LC_SP": {
-    "title": "Sunteti imputernicit pentru un agent economic ce doreste spor de putere."
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste spor de putere.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_noncasnic_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PJ_LC_AA": {
-    "title": "Sunteti imputernicit pentru un agent economic ce doreste un aviz de amplasament."
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste un aviz de amplasament.",
+    "documents": [
+      {
+        "document": "cerere_chestionar_pentru_obtinerea_AA_AC_non_casnic_IP",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PJ_LC_MA": {
-    "title": "Sunteti imputernicit pentru un agent economic ce doreste modificari administrative."
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste modificari administrative.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_noncasnic_IP",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PJ_LC_RC": {
-    "title": "Sunteti imputernicit pentru un agent economic ce doreste reamplasarea contorului."
+    "title": "Sunteti imputernicit pentru un agent economic ce doreste reamplasarea contorului.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_noncasnic_IP",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PJ_LC_SP": {
-    "title": "Sunteti un agent economic ce doreste spor de putere."
+    "title": "Sunteti un agent economic ce doreste spor de putere.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_noncasnic_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PJ_LC_AA": {
-    "title": "Sunteti un agent economic ce doreste un aviz de amplasament."
+    "title": "Sunteti un agent economic ce doreste un aviz de amplasament.",
+    "documents": [
+      {
+        "document": "cerere_chestionar_pentru_obtinerea_AA_AC_non_casnic_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PJ_LC_MA": {
-    "title": "Sunteti un agent economic ce doreste modificari administrative."
+    "title": "Sunteti un agent economic ce doreste modificari administrative.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_noncasnic_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_CONSUMATOR_PJ_LC_RC": {
-    "title": "Sunteti un un agent economic ce doreste reamplasarea contorului."
+    "title": "Sunteti un un agent economic ce doreste reamplasarea contorului.",
+    "documents": [
+      {
+        "document": "cerere_actualizare_atr_loc_consum_noncasnic_FIP",
+        "required": true
+      }
+    ]
   },
   "IP_CONSUMATOR_PJ_FLC": {
     "title": "Sunteti imputernicit pentru un agent economic ce doreste o racordare noua.",
     "documents": [
       {
-        "document": "chestionar_energetic_mici_consumatori",
-        "required": false
-      },
-
-      {
         "document": "cerere_racordare_loc_consum_non_casnic_IP",
         "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
       },
       {
         "document": "chestionar_energetic_mari_consumatori",
@@ -79,6 +230,10 @@
         "required": true
       },
       {
+        "document": "calculator_energetic",
+        "required": true
+      },
+      {
         "document": "chestionar_energetic_mari_consumatori",
         "required": false
       },
@@ -89,16 +244,57 @@
     ]
   },
   "IP_PROSUMATOR_PN_FLC_PF": {
-    "title": "Sunteti imputernicit pentru o persoana fizica ce doreste sa devina prosumator si sa se racordeze la retea."
+    "title": "Sunteti imputernicit pentru o persoana fizica ce doreste sa devina prosumator si sa se racordeze la retea.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_IP",
+        "required": true
+      }
+    ]
+  },
+  "FIP_PROSUMATOR_PN_FLC_PF": {
+    "title": "Sunteti o persoana fizica doritoare sa devina prosumator si sa se racordeze la retea.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PN_FLC_PJ": {
-    "title": "Sunteti o persoana juridica ce doreste sa devina prosumator si sa se racordeze la retea."
+    "title": "Sunteti o persoana juridica ce doreste sa devina prosumator si sa se racordeze la retea.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_FIP",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PN_FLC_PJ": {
-    "title": "Sunteti imputernicit pentru o persoana juridica ce doreste sa devina prosumator si sa se racordeze la retea."
+    "title": "Sunteti imputernicit pentru o persoana juridica ce doreste sa devina prosumator si sa se racordeze la retea.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_IP",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PN_LC_PF_AFM": {
-    "title": "Sunteti imputernicit pentru o persoana fizica doritoare sa devina prosumator si sa acceseze programul AFM."
+    "title": "Sunteti imputernicit pentru o persoana fizica doritoare sa devina prosumator si sa acceseze programul AFM.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PF_IP",
+        "required": true
+      },
+      {
+        "document": "cerere_racordate_prosumator_LC_EXISTENT_AFM_anexa4_PF_IP",
+        "required": true
+      },
+      {
+        "document": "chestionar_evergetic_producatori_prosumatori",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PN_LC_PJ_EUP": {
     "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP."
@@ -109,9 +305,7 @@
   "FIP_PROSUMATOR_PN_LC_PJ_EUP": {
     "title": "Sunteti o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP."
   },
-  "FIP_PROSUMATOR_PN_FLC_PF": {
-    "title": "Sunteti o persoana fizica doritoare sa devina prosumator si sa se racordeze la retea."
-  },
+
   "FIP_PROSUMATOR_PN_LC_PJ_FEUP": {
     "title": "Sunteti o persoana juridica doritoare sa devina prosumator."
   },
