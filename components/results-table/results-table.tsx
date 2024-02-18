@@ -9,7 +9,6 @@ import { ClipboardType, FileUp } from "lucide-react";
 
 interface DocumentProps {
   document: string;
-  type: string;
 }
 
 interface Props {
@@ -88,7 +87,9 @@ const ResultsTable = (props: Props) => {
                   <th className={classes.th} style={{ width: "1rem" }} />
                   <th className={classes.th}>Denumire</th>
                   <th className={classes.th}>Tip</th>
-                  <th className={classes.th}>Obligatoriu</th>
+                  <th className={classes.th} style={{ paddingRight: "0.5rem" }}>
+                    Obligatoriu
+                  </th>
                 </tr>
               </thead>
               <tbody className={classes.tBody}>

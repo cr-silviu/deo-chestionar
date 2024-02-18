@@ -1,6 +1,16 @@
 .page {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-grow: 1;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wrapper {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
