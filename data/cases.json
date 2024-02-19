@@ -297,79 +297,325 @@
     ]
   },
   "IP_PROSUMATOR_PN_LC_PJ_EUP": {
-    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP."
+    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PJ_IP",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PN_LC_PF_AFM": {
-    "title": "Sunteti o persoana fizica doritoare sa devina prosumator si sa acceseze programul AFM."
+    "title": "Sunteti o persoana fizica doritoare sa devina prosumator si sa acceseze programul AFM.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PF_FIP",
+        "required": true
+      },
+      {
+        "document": "cerere_racordate_prosumator_LC_EXISTENT_AFM_anexa4_PF_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PN_LC_PJ_EUP": {
-    "title": "Sunteti o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP."
+    "title": "Sunteti o persoana juridica doritoare sa devina prosumator si sa acceseze programul Electric UP.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PJ_FIP",
+        "required": true
+      }
+    ]
   },
 
   "FIP_PROSUMATOR_PN_LC_PJ_FEUP": {
-    "title": "Sunteti o persoana juridica doritoare sa devina prosumator."
+    "title": "Sunteti o persoana juridica doritoare sa devina prosumator.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PJ_FIP",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PN_LC_PF_FAFM": {
-    "title": "Sunteti o persoana juridica doritoare sa devina prosumator."
+    "title": "Sunteti o persoana juridica doritoare sa devina prosumator.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PF_FIP",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PN_LC_PJ_FEUP": {
-    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator."
+    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PJ_IP",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PN_LC_PF_FAFM": {
-    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator."
+    "title": "Sunteti imputernicit pentru o persoana juridica doritoare sa devina prosumator.",
+    "documents": [
+      {
+        "document": "notificare_racordare_prosumatori_LC_EXISTENT_anexa2_PF_IP",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PE_SI_PF": {
-    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare."
+    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PE_SI_PF": {
-    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare."
+    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa adauge statie/statii de incarcare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PE_SI_PJ": {
-    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare."
+    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PE_SI_PJ": {
-    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare."
+    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa adauge statie/statii de incarcare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PE_BS_PF": {
-    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare."
+    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PE_BS_PF": {
-    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare."
+    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa monteze baterii de stocare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PE_BS_PJ": {
-    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare."
+    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PE_BS_PJ": {
-    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare."
+    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa monteze baterii de stocare.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PE_MISC_PF": {
-    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+    "title": "Sunteti un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PE_MISC_PF": {
-    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+    "title": "Sunteti imputernicit pentru un prosumator-persoana fizica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PF_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PROSUMATOR_PE_MISC_PJ": {
-    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+    "title": "Sunteti un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PROSUMATOR_PE_MISC_PJ": {
-    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor."
+    "title": "Sunteti imputernicit pentru un prosumator-persoana juridica existent ce doreste sa mareasca puterea evacuata, numarul de panouri sau sa monteze un invertor.",
+    "documents": [
+      {
+        "document": "cerere_racordare_prosumatori_LC_NOU_anexa1_PJ_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PRODUCATOR_FAA": {
-    "title": "Sunteti un producator ce doreste racordare si aviz de amplasament."
+    "title": "Sunteti un producator ce doreste racordare si aviz de amplasament.",
+    "documents": [
+      {
+        "document": "cerere_emitere_actualizare_ATR_racordare_producatori_FAA_FIP",
+        "required": true
+      },
+      {
+        "document": "cerere_chestionar_pentru_obtinerea_AA_AC_non_casnic_FIP",
+        "required": true
+      },
+
+      {
+        "document": "date_tehnice_grup_producere",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PRODUCATOR_FAA": {
-    "title": "Sunteti imputernicit pentru un producator ce doreste racordare si aviz de amplasament."
+    "title": "Sunteti imputernicit pentru un producator ce doreste racordare si aviz de amplasament.",
+    "documents": [
+      {
+        "document": "cerere_emitere_actualizare_ATR_racordare_producatori_FAA_IP",
+        "required": true
+      },
+      {
+        "document": "cerere_chestionar_pentru_obtinerea_AA_AC_non_casnic_IP",
+        "required": true
+      },
+
+      {
+        "document": "date_tehnice_grup_producere",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "FIP_PRODUCATOR_AA": {
-    "title": "Sunteti un producator ce doreste racordare."
+    "title": "Sunteti un producator ce doreste racordare.",
+    "documents": [
+      {
+        "document": "cerere_emitere_actualizare_ATR_racordare_producatori_AA_FIP",
+        "required": true
+      },
+
+      {
+        "document": "date_tehnice_grup_producere",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_PRODUCATOR_AA": {
-    "title": "Sunteti imputernicit un producator ce doreste racordare."
+    "title": "Sunteti imputernicit un producator ce doreste racordare.",
+    "documents": [
+      {
+        "document": "cerere_emitere_actualizare_ATR_racordare_producatori_AA_IP",
+        "required": true
+      },
+
+      {
+        "document": "date_tehnice_grup_producere",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      }
+    ]
   },
   "IP_DEZVOLTATOR": {
-    "title": "Sunteti imputernicit sa depuneti documentele pentru un dezvoltator."
+    "title": "Sunteti imputernicit sa depuneti documentele pentru un dezvoltator.",
+    "documents": [
+      {
+        "document": "cerere_racordare_dezvoltator_IP",
+        "required": true
+      }
+    ]
   },
   "FIP_DEZVOLTATOR": {
-    "title": "Sunteti un dezvoltator."
+    "title": "Sunteti un dezvoltator.",
+    "documents": [
+      {
+        "document": "cerere_racordare_dezvoltator_FIP",
+        "required": true
+      }
+    ]
   }
 }

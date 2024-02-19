@@ -138,5 +138,20 @@
     "title": "Schema electrica monofilara a instalatiei de producere",
     "description": "",
     "details": ""
+  },
+  "descriere_modificari_natura_tehnica": {
+    "title": "Descrierea modificarilor tehnice fata de situatia anterioara",
+    "description": "",
+    "details": ""
+  },
+  "acte_doveditoare_modificari_administrative": {
+    "title": "Acte doveditoare modificari de natura administrativa",
+    "description": "",
+    "details": ""
+  },
+  "expunere_problema_ce_impune_modificarea_instalatiei": {
+    "title": "Expunere problema a carei rezolvare impune modificarea instalatiei de racordare si documentele ce sustin cererea",
+    "description": "",
+    "details": ""
   }
 }

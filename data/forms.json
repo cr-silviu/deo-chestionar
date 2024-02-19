@@ -840,5 +840,335 @@
     "description": "",
     "details": "",
     "annexes": []
+  },
+  "cerere_emitere_actualizare_ATR_racordare_producatori_AA_FIP": {
+    "title": "01-03-01_P03-F03_Cerere de emitere_actualizare ATR pentru racordare producatori_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+      {
+        "annex": "fisa_tehnica_echipament_reincarcare",
+        "required": false
+      },
+      {
+        "annex": "aviz_de_amplasare",
+        "required": true
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      },
+
+      {
+        "annex": "descriere_modificari_natura_tehnica",
+        "required": false
+      },
+      {
+        "annex": "acte_doveditoare_modificari_administrative",
+        "required": false
+      },
+      {
+        "annex": "expunere_problema_ce_impune_modificarea_instalatiei",
+        "required": false
+      }
+    ]
+  },
+  "cerere_emitere_actualizare_ATR_racordare_producatori_AA_IP": {
+    "title": "01-03-01_P03-F03_Cerere de emitere_actualizare ATR pentru racordare producatori_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+      {
+        "annex": "fisa_tehnica_echipament_reincarcare",
+        "required": false
+      },
+      {
+        "annex": "aviz_de_amplasare",
+        "required": true
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      },
+
+      {
+        "annex": "descriere_modificari_natura_tehnica",
+        "required": false
+      },
+      {
+        "annex": "acte_doveditoare_modificari_administrative",
+        "required": false
+      },
+      {
+        "annex": "expunere_problema_ce_impune_modificarea_instalatiei",
+        "required": false
+      }
+    ]
+  },
+  "cerere_emitere_actualizare_ATR_racordare_producatori_FAA_IP": {
+    "title": "01-03-01_P03-F03_Cerere de emitere_actualizare ATR pentru racordare producatori_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+      {
+        "annex": "fisa_tehnica_echipament_reincarcare",
+        "required": false
+      },
+
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      },
+
+      {
+        "annex": "descriere_modificari_natura_tehnica",
+        "required": false
+      },
+      {
+        "annex": "acte_doveditoare_modificari_administrative",
+        "required": false
+      },
+      {
+        "annex": "expunere_problema_ce_impune_modificarea_instalatiei",
+        "required": false
+      }
+    ]
+  },
+  "cerere_emitere_actualizare_ATR_racordare_producatori_FAA_FIP": {
+    "title": "01-03-01_P03-F03_Cerere de emitere_actualizare ATR pentru racordare producatori_rev07",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": false
+      },
+      {
+        "annex": "fisa_tehnica_echipament_reincarcare",
+        "required": false
+      },
+
+      {
+        "annex": "plan_de_situatie",
+        "required": false
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      },
+
+      {
+        "annex": "descriere_modificari_natura_tehnica",
+        "required": false
+      },
+      {
+        "annex": "acte_doveditoare_modificari_administrative",
+        "required": false
+      },
+      {
+        "annex": "expunere_problema_ce_impune_modificarea_instalatiei",
+        "required": false
+      }
+    ]
+  },
+  "date_tehnice_grup_producere": {
+    "title": "01-03-01_P03-F12_Date tehnice grup producere_rev04",
+    "description": "",
+    "details": "",
+    "annexes": []
+  },
+  "cerere_racordare_dezvoltator_FIP": {
+    "title": "01-03-01_P01-F42_Cerere racordare dezvoltator_rev02",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": true
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": true
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      }
+    ]
+  },
+  "cerere_racordare_dezvoltator_IP": {
+    "title": "01-03-01_P01-F42_Cerere racordare dezvoltator_rev02",
+    "description": "",
+    "details": "",
+    "annexes": [
+      {
+        "annex": "imputernicire",
+        "required": true
+      },
+      {
+        "annex": "extras_carte_funciara",
+        "required": false
+      },
+      {
+        "annex": "act_de_identitate",
+        "required": true
+      },
+      {
+        "annex": "copie_cui",
+        "required": true
+      },
+      {
+        "annex": "act_de_proprietate",
+        "required": true
+      },
+      {
+        "annex": "certificat_urbanism",
+        "required": true
+      },
+      {
+        "annex": "autorizatie_de_construire",
+        "required": false
+      },
+      {
+        "annex": "plan_de_situatie",
+        "required": true
+      },
+      {
+        "annex": "certificat_nomenclatura_stradala",
+        "required": false
+      }
+    ]
   }
 }

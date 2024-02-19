@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import classes from "./case-modal.module.scss";
-import { GitCommitVertical, X } from "lucide-react";
+import { FolderCheck, X } from "lucide-react";
 
 import cases from "@/data/cases.json";
 
@@ -79,7 +79,14 @@ const CaseNodal = (props: Props) => {
         </div>
       ) : null}
       <div className={classes.buttonTitle} onClick={() => setOpen(true)}>
-        <GitCommitVertical />
+        <FolderCheck
+          size={16}
+          // style={
+          //   currentCase?.documents?.length
+          //     ? { color: "rgba(0,0,0,0.5)" }
+          //     : { color: "transparent" }
+          // }
+        />
 
         <p>{capitalizeFirstLetter(newCaseTitle)}</p>
       </div>
