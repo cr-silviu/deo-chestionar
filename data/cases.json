@@ -1,4 +1,46 @@
 {
+  "FIP_CONSUMATOR_PF_FLC": {
+    "title": "Sunteti un utilizator casnic ce doreste o racordare noua.",
+    "documents": [
+      {
+        "document": "cerere_racordare_loc_consum_casnic_FIP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
+      },
+      {
+        "document": "chestionar_energetic_mari_consumatori",
+        "required": false
+      }
+    ]
+  },
+  "IP_CONSUMATOR_PF_FLC": {
+    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste o racordare noua.",
+    "documents": [
+      {
+        "document": "cerere_racordare_loc_consum_casnic_IP",
+        "required": true
+      },
+      {
+        "document": "calculator_energetic",
+        "required": true
+      },
+      {
+        "document": "chestionar_energetic_mici_consumatori",
+        "required": false
+      },
+      {
+        "document": "chestionar_energetic_mari_consumatori",
+        "required": false
+      }
+    ]
+  },
   "IP_CONSUMATOR_PF_LC_SP": {
     "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste spor de putere.",
     "documents": [
@@ -76,48 +118,6 @@
       {
         "document": "cerere_actualizare_atr_loc_consum_casnic_FIP",
         "required": true
-      }
-    ]
-  },
-  "IP_CONSUMATOR_PF_FLC": {
-    "title": "Sunteti imputernicit pentru un utilizator casnic ce doreste o racordare noua.",
-    "documents": [
-      {
-        "document": "cerere_racordare_loc_consum_casnic_IP",
-        "required": true
-      },
-      {
-        "document": "calculator_energetic",
-        "required": true
-      },
-      {
-        "document": "chestionar_energetic_mici_consumatori",
-        "required": false
-      },
-      {
-        "document": "chestionar_energetic_mari_consumatori",
-        "required": false
-      }
-    ]
-  },
-  "FIP_CONSUMATOR_PF_FLC": {
-    "title": "Sunteti un utilizator casnic ce doreste o racordare noua.",
-    "documents": [
-      {
-        "document": "cerere_racordare_loc_consum_casnic_FIP",
-        "required": true
-      },
-      {
-        "document": "calculator_energetic",
-        "required": true
-      },
-      {
-        "document": "chestionar_energetic_mici_consumatori",
-        "required": false
-      },
-      {
-        "document": "chestionar_energetic_mari_consumatori",
-        "required": false
       }
     ]
   },

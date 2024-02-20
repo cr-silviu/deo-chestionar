@@ -1,11 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import classes from "./case-modal.module.scss";
-import { FolderCheck, X } from "lucide-react";
+import { FolderCheck, X, ChevronRight } from "lucide-react";
+import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/navigation";
+
+import { useAppDispatch } from "@/app/hooks/redux-hooks";
 
 import cases from "@/data/cases.json";
 
 import ResultsTable from "@/components/results-table/results-table";
+import Button from "@/components/button/button";
+
+import { addUser } from "@/actions/user-actions";
 type Props = {
   case: string;
 };
@@ -24,8 +31,10 @@ function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const CaseNodal = (props: Props) => {
+const CaseModal = (props: Props) => {
+  const dispatch = useAppDispatch();
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   //@ts-ignore
   const currentCase: Case = cases[props?.case];
   const newCaseTitle = currentCase?.title
@@ -35,6 +44,14 @@ const CaseNodal = (props: Props) => {
 
   const closeModalHandler = () => {
     setOpen(false);
+  };
+
+  const handleProcessStart = () => {
+    const uuid = uuidv4();
+
+    dispatch(addUser(uuid));
+
+    // router.push("/consumator/");
   };
 
   return (
@@ -73,6 +90,16 @@ const CaseNodal = (props: Props) => {
                 <div className={classes.results}>
                   <ResultsTable documents={currentCase?.documents} />
                 </div>
+                <div className={classes.footer}>
+                  <Button
+                    aspect="primary"
+                    hasIcon={true}
+                    onClick={() => handleProcessStart()}
+                  >
+                    Incepe proces
+                    <ChevronRight size={16} />
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -95,4 +122,4 @@ const CaseNodal = (props: Props) => {
   );
 };
 
-export default CaseNodal;
+export default CaseModal;

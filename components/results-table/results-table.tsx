@@ -69,10 +69,6 @@ const ResultsTable = (props: Props) => {
     setDocumentsArray(populatedDocumentsArray);
   }, []);
 
-  useEffect(() => {
-    console.log(documentsArray);
-  }, [documentsArray]);
-
   return (
     <div className={classes.wrapper}>
       {!currentDocuments ? null : (
