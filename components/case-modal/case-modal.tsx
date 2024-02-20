@@ -5,7 +5,7 @@ import { FolderCheck, X, ChevronRight } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
 
-import { useAppDispatch } from "@/app/hooks/redux-hooks";
+import { useAppDispatch } from "@/hooks/redux-hooks";
 
 import cases from "@/data/cases.json";
 
@@ -49,9 +49,8 @@ const CaseModal = (props: Props) => {
   const handleProcessStart = () => {
     const uuid = uuidv4();
 
-    dispatch(addUser(uuid));
-
-    // router.push("/consumator/");
+    dispatch(addUser({ id: uuid }));
+    router.push(`/utilizator/consumator/${uuid}`);
   };
 
   return (
