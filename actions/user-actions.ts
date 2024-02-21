@@ -1,7 +1,7 @@
-import { ActionTypes } from "@/types/actionTypes";
+import { UserActionTypes } from "@/types/userActionTypes";
 
 interface IAddUser {
-  type: ActionTypes["ADD_USER"];
+  type: UserActionTypes["ADD_USER"];
   payload: any;
 }
 
