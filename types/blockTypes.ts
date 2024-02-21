@@ -32,5 +32,8 @@ export type ProcessBlock={
     title:string;
     description?:string;
     tag?:string;
-    status:"complete"|"current"|"skipped"|"upcoming"
+    status:"complete"|"current"|"skipped"|"upcoming";
+    nextSteps?:NextStepsType
 }
+
+export type NextStepsType = (ProcessBlock|InvoiceBlock|FormBlock|UploadBlock)[]

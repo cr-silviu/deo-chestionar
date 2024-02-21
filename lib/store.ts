@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import usersReducer from "@/reducers/usersReducer";
+import processFlowReducer from "@/reducers/processFlowReducer"
 // ...
 
 export const makeStore = () => {
@@ -7,6 +8,8 @@ export const makeStore = () => {
     reducer: {
       //@ts-ignore
       users: usersReducer,
+      //@ts-ignore
+      processFlow:processFlowReducer
     },
   });
 };

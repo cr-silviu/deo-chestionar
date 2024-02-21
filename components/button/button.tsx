@@ -5,12 +5,12 @@ import cls from "classnames";
 
 interface Props extends React.ComponentPropsWithoutRef<"button"> {
   aspect?: "primary" | "secondary" | "tertiary" | "info" | "warning" | "danger";
-  icon: boolean;
+  components: 'icon'|"text";
   enabled?: boolean;
 }
 
 const Button = (props: Props) => {
-  const icon = props.icon ? props.icon : false;
+  const components = props.components ? props.components : "text";
   const enabled = props.enabled ? props.enabled : true;
   const aspect = props.aspect ? props.aspect : "secondary";
   return (
@@ -18,7 +18,7 @@ const Button = (props: Props) => {
       {...props}
       className={cls(
         classes.button,
-        icon ? classes.withIcon : null,
+        components === "icon" ? classes.withIcon : null,
         aspect === "primary" ? classes.primary : null,
         aspect === "secondary" ? classes.secondary : null,
         aspect === "tertiary" ? classes.tertiary : null,

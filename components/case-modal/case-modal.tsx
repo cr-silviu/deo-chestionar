@@ -13,6 +13,9 @@ import ResultsTable from "@/components/results-table/results-table";
 import Button from "@/components/button/button";
 
 import { addUser } from "@/actions/user-actions";
+import { initiateFlow } from "@/actions/flow-actions";
+
+
 type Props = {
   case: string;
 };
@@ -50,6 +53,7 @@ const CaseModal = (props: Props) => {
     const uuid = uuidv4();
 
     dispatch(addUser({ id: uuid }));
+    dispatch(initiateFlow())
     router.push(`/utilizator/consumator/${uuid}`);
   };
 
@@ -92,7 +96,7 @@ const CaseModal = (props: Props) => {
                 <div className={classes.footer}>
                   <Button
                     aspect="primary"
-                    icon={true}
+                    components="icon"
                     onClick={() => handleProcessStart()}
                   >
                     Incepe proces

@@ -6,22 +6,37 @@ interface IAction{
     payload:any
 }
 
-const inifialFlow:(UploadBlock|FormBlock|InvoiceBlock|ProcessBlock)[]=[
-{
+type IFLOW =(UploadBlock|FormBlock|InvoiceBlock|ProcessBlock)[]
+
+const initialFlow:IFLOW=[
+  {
     id:"1",
     type:"process",
     status:"current",
     title:"Depunere documente",
     description:"...",
-}
+    nextSteps:[{
+        id:"1.1",
+        type:"process",
+        status:"current",
+        title:"Incarcare documente",
+        description:"",
+    },
+    {
+        id:"1.2",
+        type:"process",
+        status:"current",
+        title:"Verificare documente din partea DEO",
+        description:"",
+    }]
+  }
 ]
 
 
-const reducer = (flow = [], action: IAction) => {
+const reducer = (flow = [] as IFLOW, action: IAction) => {
   switch (action.type) {
     case "INITIATE_FLOW":
-      console.log(action.payload);
-      return flow;
+      return [...flow, initialFlow];
     default:
       return [];
   }
