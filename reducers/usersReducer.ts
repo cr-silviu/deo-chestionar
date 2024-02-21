@@ -1,8 +1,11 @@
-import { UnknownAction } from "@reduxjs/toolkit";
+import { UserActionTypes } from "@/types/userActionTypes";
 
+interface IAction{
+  type: keyof UserActionTypes;
+  payload:any
+}
 
-
-const reducer = (allUsers = [], action: UnknownAction) => {
+const reducer = (allUsers = [], action: IAction) => {
   switch (action.type) {
     case "ADD_USER":
       console.log(action.payload);
