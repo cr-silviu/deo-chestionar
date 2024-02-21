@@ -92,7 +92,7 @@ const CaseModal = (props: Props) => {
                 <div className={classes.footer}>
                   <Button
                     aspect="primary"
-                    hasicon={true}
+                    icon={true}
                     onClick={() => handleProcessStart()}
                   >
                     Incepe proces
