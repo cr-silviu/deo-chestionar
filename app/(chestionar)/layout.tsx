@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
+import classes from "./page.module.scss";
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col min-h-screen min-w-full bg-red max-h-screen">
+    <div className={classes.layout}>
       <main className="flex w-full flex-grow">{children}</main>
     </div>
   );

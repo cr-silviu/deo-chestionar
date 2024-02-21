@@ -1,9 +1,10 @@
-// @ts-nocheck
+//@ts-nocheck
 "use-client";
 import React, { useState, useEffect } from "react";
 import classes from "./results-table.module.scss";
 import forms from "@/data/forms.json";
 import annexes from "@/data/form_annexes.json";
+import cls from "classnames";
 
 import { ClipboardType, FileUp } from "lucide-react";
 
@@ -21,7 +22,7 @@ const ResultsTable = (props: Props) => {
   const myForms: {
     [key: string]: {
       title: string;
-      annexes: any;
+      annexes: any[];
     };
   }[] = forms;
 
@@ -32,11 +33,11 @@ const ResultsTable = (props: Props) => {
     const documentsArray: {
       [key: string]: { title: string; annexes: any };
     }[] = currentDocuments?.map((item) => ({
-      ...myForms[item.document],
-      required: item.required,
+      ...myForms[item?.document],
+      required: item?.required,
     }));
 
-    let existingAnnexesArray = [];
+    let existingAnnexesArray = [] as any[];
 
     const populatedDocumentsArray = documentsArray
       ?.map((document) => ({
@@ -89,8 +90,8 @@ const ResultsTable = (props: Props) => {
                 </tr>
               </thead>
               <tbody className={classes.tBody}>
-                {documentsArray?.map((item, index) => (
-                  <>
+                {documentsArray?.map((item: any, index: any) => (
+                  <React.Fragment key={index}>
                     <tr className={classes.tBodyRow} key={index}>
                       <td className={classes.td}>
                         <ClipboardType
@@ -215,7 +216,7 @@ const ResultsTable = (props: Props) => {
                         </td>
                       </tr>
                     ))}
-                  </>
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>

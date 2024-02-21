@@ -1,0 +1,48 @@
+.page {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wrapper {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: clamp(400px, calc(100% - 6rem), 900px);
+}
+
+.layout {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #1f4037, #99f2c8);
+}
+
+/* width */
+.layout::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.layout::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+/* Handle */
+.layout::-webkit-scrollbar-thumb {
+  background: #b6bac3;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+.layout::-webkit-scrollbar-thumb:hover {
+  background: hsl(152, 37%, 63%);
+}
