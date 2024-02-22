@@ -127,28 +127,40 @@ const processFlow=[
 
 ]
 
+function useNodeCounter (data:any):number{
+    let countedNodes = 0;
+
+    for(let dataPoints of data){
+        countedNodes = countedNodes + 1;
+        if(dataPoints.nextSteps){
+            countedNodes += useNodeCounter(dataPoints.nextSteps)
+        }
+    }
+
+return countedNodes
+}
+
 const StepComponent=()=>{
     // const processFlow = useAppSelector((state)=> state.processFlow)
-    const [selectedIndex, setSelectedIndex] = useState(0)
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
     
-    console.log(selectedIndex)
 
-    useEffect(()=>{
-        console.log(selectedIndex)
-    },[selectedIndex])
+    
 
     const handleSelectedItem = (value:number)=>{
-        console.log(value);
         setSelectedIndex(value);    
     }
    
     return <div className={classes.componentWrapper}>
         {
             processFlow?.map((step:any, stepIndex:number)=>(
-            <div className={classes.step} key={stepIndex} onClick={()=>handleSelectedItem(stepIndex)}>
+            <div className={classes.step} key={stepIndex}  onClick={()=>handleSelectedItem(stepIndex)}>
                 <PrimaryComponent title={step?.title}  index={Number(stepIndex + 1)}/>
-                <div className={cls(classes.secondaryComponentBody, selectedIndex === stepIndex ? classes.secondaryComponentBodyOpen : null)}>
+
+                <div className={cls(classes.secondaryComponentBody, selectedIndex === stepIndex ? classes.secondaryComponentBodyOpen : null)} 
+                //@ts-ignore
+                style={{"--max-height":`${20*useNodeCounter([processFlow[stepIndex]])}px`}}>
                     <SecondaryComponent type={step.type} nextSteps={step.nextSteps}/>
                       
                     <div className={classes.secondaryComponentMarker}>
@@ -193,8 +205,6 @@ const SecondaryComponent=(props:ISecondaryComponent)=>{
 
     
     return <div className={classes.secondaryComponentWrapper}>
-       
-
         {nextSteps?.map((step:any, index)=>(
             <div className={classes.secondaryComponentListWrapper} key={index}>
             <div className={classes.secundaryComponentListItem}>
@@ -204,8 +214,6 @@ const SecondaryComponent=(props:ISecondaryComponent)=>{
             <SecondaryComponent type={step.type} nextSteps={step?.nextSteps} />
         </div>
         ))}
-        
-   
     </div>
 }
 
