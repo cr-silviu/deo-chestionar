@@ -36,4 +36,6 @@ export type ProcessBlock={
     nextSteps?:NextStepsType
 }
 
+export type BuildingBlocks = ProcessBlock|InvoiceBlock|FormBlock|UploadBlock;
+
 export type NextStepsType = (ProcessBlock|InvoiceBlock|FormBlock|UploadBlock)[]

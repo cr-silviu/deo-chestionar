@@ -1,14 +1,14 @@
 import {FlowActionTypes} from "@/types/flowActionTypes"
-import{UploadBlock,FormBlock,InvoiceBlock,ProcessBlock}from "@/types/blockTypes"
+import{BuildingBlocks}from "@/types/blockTypes"
 
 interface IAction{
     type:keyof FlowActionTypes,
     payload:any
 }
 
-type IFLOW =(UploadBlock|FormBlock|InvoiceBlock|ProcessBlock)[]
 
-const initialFlow:IFLOW=[
+
+const initialFlow=[
   {
     id:"1",
     type:"process",
@@ -33,10 +33,10 @@ const initialFlow:IFLOW=[
 ]
 
 
-const reducer = (flow = [] as IFLOW, action: IAction) => {
+const reducer = (flow = [] as BuildingBlocks[], action: IAction) => {
   switch (action.type) {
     case "INITIATE_FLOW":
-      return [...flow, initialFlow];
+      return  initialFlow;
     default:
       return [];
   }
