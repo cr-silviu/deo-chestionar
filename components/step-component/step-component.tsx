@@ -148,7 +148,7 @@ const StepComponent=()=>{
             processFlow?.map((step:any, stepIndex:number)=>(
             <div className={classes.step} key={stepIndex} onClick={()=>handleSelectedItem(stepIndex)}>
                 <PrimaryComponent title={step?.title}  index={Number(stepIndex + 1)}/>
-                <div className={cls(classes.secondaryComponentBody, selectedIndex === stepIndex ? classes.secondaryComponentBodyOpen : classes.secodraryComponentBodyClosed)}>
+                <div className={cls(classes.secondaryComponentBody, selectedIndex === stepIndex ? classes.secondaryComponentBodyOpen : null)}>
                     <SecondaryComponent type={step.type} nextSteps={step.nextSteps}/>
                       
                     <div className={classes.secondaryComponentMarker}>

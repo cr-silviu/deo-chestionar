@@ -60,28 +60,17 @@
     display:flex;
     width:100%;
     flex-direction:row;
-    overflow:hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .secondaryComponentBodyOpen{
-    animation-name: grow;
-    animation-duration: 3s;
+    max-height: 300px;
 }
 
-.secodraryComponentBodyClosed{
-    height:0px;
-}
 
-@keyframes grow{
-    0%{
-        height:0px;
-        transform-origin: bottom;
-    }
-    100%{
-        height:100%;
-        max-height:100px;
-    }
-}
+
 
 .secondaryComponentMarker{
     display:flex;
