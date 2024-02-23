@@ -14,6 +14,7 @@ import Button from "@/components/button/button";
 
 import { addUser } from "@/actions/user-actions";
 import { initiateFlow } from "@/actions/flow-actions";
+import { toast } from "react-toastify";
 
 
 type Props = {
@@ -55,6 +56,11 @@ const CaseModal = (props: Props) => {
     dispatch(addUser({ id: uuid }));
     dispatch(initiateFlow())
     router.push(`/utilizator/consumator/${uuid}`);
+    toast.success(`Seccessfully generated user: ${uuid}`,{
+      position:"top-center",
+      autoClose:2000,
+      theme:"dark",
+  })
   };
 
   return (

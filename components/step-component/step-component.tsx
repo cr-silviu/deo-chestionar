@@ -2,13 +2,14 @@
 import React,{useEffect, useState}from "react"
 import classes from './step-component.module.scss'
 import cls from 'classnames'
-import{NextStepsType, BuildingBlocks}from "@/types/blockTypes"
+import{NextStepsType}from "@/types/blockTypes"
 
-import {CircleDot} from "lucide-react"
+import {CircleDot, Check} from "lucide-react"
 
 
 
 import { useAppSelector } from "@/hooks/redux-hooks";
+import { toast } from "react-toastify";
 
 
 interface IStepComponent extends React.ComponentPropsWithoutRef<"div">{
@@ -142,39 +143,62 @@ return countedNodes
 
 const StepComponent=()=>{
     // const processFlow = useAppSelector((state)=> state.processFlow)
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState(1);
 
     
 
     
 
     const handleSelectedItem = (value:number)=>{
+        if(value === selectedIndex) return;
+        toast.info(`Changed state opened for idx: ${value+1}`,{
+            position:"top-right",
+            autoClose:500,
+            theme:"dark",
+        })
         setSelectedIndex(value);    
+    }
+
+    const handleStatus=(stepIndex:number)=>{
+        switch(true){
+            case(selectedIndex === stepIndex):
+                return "current"
+            case(stepIndex < selectedIndex):
+                return "complete"
+            case(stepIndex > selectedIndex):
+                return "upcoming"
+            default:
+                return "skipped"
+        }
     }
    
     return <div className={classes.componentWrapper}>
         {
-            processFlow?.map((step:any, stepIndex:number)=>(
-            <div className={classes.step} key={stepIndex}  onClick={()=>handleSelectedItem(stepIndex)}>
-                <PrimaryComponent title={step?.title}  index={Number(stepIndex + 1)}/>
+            processFlow?.map((step:any, stepIndex:number)=>{
+            const isLastChild = stepIndex === processFlow?.length - 1
+            
+           return <div className={cls(classes.step,
+            handleStatus(stepIndex) === "current" ? classes.stickyStep : null
+           )} key={stepIndex}  onClick={()=>handleSelectedItem(stepIndex)} >
+                <PrimaryComponent status={handleStatus(stepIndex)} title={step?.title}  index={Number(stepIndex + 1)}  />
 
                 <div className={cls(classes.secondaryComponentBody, selectedIndex === stepIndex ? classes.secondaryComponentBodyOpen : null)} 
                 //@ts-ignore
                 style={{"--max-height":`${20*useNodeCounter([processFlow[stepIndex]])}px`}}>
                     <SecondaryComponent type={step.type} nextSteps={step.nextSteps}/>
                       
-                    <div className={classes.secondaryComponentMarker}>
+                    <div className={classes.secondaryComponentMarker} style={isLastChild ? {visibility:"hidden"} : {}}>
                         <div className={classes.verticalLine}/>
                     </div>
                 </div>
-                <div className={classes.bottomDividerDiv}> 
+                <div className={classes.bottomDividerDiv} style={isLastChild ? {visibility:"hidden"} : {}}> 
                     <div className={classes.secondaryComponentMarker}>
                         <div className={classes.verticalLine}/>
                     </div>
 
                 </div>
             </div>
-            ))
+})
         }
      
     </div>
@@ -183,14 +207,45 @@ const StepComponent=()=>{
 interface IPrimaryComponent extends React.ComponentPropsWithoutRef<"div">{
     title:string;
     index:number;
+    status:"complete"|"current"|"skipped"|"upcoming";
 }
 
 const PrimaryComponent = (props:IPrimaryComponent) =>{
-   const {title, index } =props
-    return <div className={classes.primaryComponentWrapper}>
-        <div className={classes.primaryComponentTitleWrapper}>{`${title}`}</div>
+   const {title, index, status } =props
+    return <div className={cls(classes.primaryComponentWrapper)}>
+        <div className={cls(classes.primaryComponentTitleWrapper,
+            status === "complete" ? classes.titleComplete: null,
+            status === "current" ? classes.titleCurrent: null,
+            status === "skipped" ? classes.titleSkipped: null,
+            status === "upcoming" ? classes.titleUpcoming: null,
+            )}>{`${title}`}</div>
         <div className={classes.bubbleComponent}>
-            <div className={classes.bubble}>{index}</div>
+         
+          
+                {status === "complete" ?
+                <div className={cls(classes.bubble, classes.bubbleComplete)}>  
+                    <Check size={12}/>
+                </div>
+                :
+                null
+                }
+                {status === "current" ?
+                <div className={classes.currentBubbleWrapper}>
+                    <div className={classes.pulsatingBubble}/>
+                    <div className={cls(classes.bubble, classes.bubbleCurrent)}>  
+                        {index}
+                    </div>
+                </div>
+                :
+                null
+                }
+                  {status === "upcoming" ?
+                <div className={cls(classes.bubble, classes.bubbleUpcoming)}>  
+                    {index}
+                </div>
+                :
+                null
+                }
         </div>
     </div>
 }

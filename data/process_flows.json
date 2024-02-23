@@ -1,0 +1,33 @@
+{
+    "standard_flow":[
+        {
+            "id":"1",
+            "type":"process",
+            "status":"current",
+            "title":"Depunere documente",
+            "description":"...",
+            "nextSteps":[
+              {  
+                "id":"1",
+                "type":"process",
+                "status":"current",
+                "title":"Incarcare documente",
+                "description":"...",
+                "nextSteps":[
+
+                ]
+            },
+            {  
+                "id":"1",
+                "type":"process",
+                "status":"current",
+                "title":"Verificare documente",
+                "description":"...",
+                "nextSteps":[
+                    
+                ]
+            }
+            ]
+        }
+    ]
+}

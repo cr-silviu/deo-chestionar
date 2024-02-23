@@ -2,6 +2,7 @@
 .component-wrapper{
     display:flex;
     flex-direction: column;
+    position:relative;
 
 }
 
@@ -17,6 +18,8 @@
     }
 
 }
+
+.stickyStep{}
 
 
 .primaryComponentWrapper{
@@ -34,6 +37,26 @@
         &:hover{
             cursor:pointer;
         }
+
+     
+    }
+
+    .titleComplete{
+        color:var(--pale-sky-500);
+     
+    }
+
+    .titleUpcoming{
+        color:var(--pale-sky-400);
+    }
+
+    .titleCurrent{
+        color:var(--pale-sky-900);
+
+    }
+
+     .titleSkipped{
+        color:var(--pale-sky-400);
     }
 
     .bubbleComponent{
@@ -45,14 +68,68 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        background-color: var(--forest-green-700);
+        text-align:center;
+        z-index:10;
+
+        background-color: var(--forest-green-500);
         border-radius:50%;
         width:1.5rem;
         height:1.5rem;
+        box-shadow: 0 0 15px var(--black-400);
+
         color:var(--pale-sky-50);
-        font-weight:bold;
-        box-shadow: 0 0 15px var(--black-400)
+        font-weight:400;
+        font-size: 0.8rem;
+
         }
+
+        .bubbleComplete{
+            background-color: var(--forest-green-500);
+            color:var(--pale-sky-50)
+        }
+
+        .bubbleCurrent{
+            background-color: var(--forest-green-500);
+            color:var(--pale-sky-50);
+
+
+
+          
+        }
+
+        .bubbleUpcoming{
+            background-color: var(--pale-sky-600);
+            color:var(--pale-sky-50)
+        }
+    }
+}
+
+.currentBubbleWrapper{
+display:flex;
+position:relative;
+
+}
+
+.pulsatingBubble{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 250%;
+    height: 250%;
+    box-sizing: border-box;
+    margin-left: -74%;
+    margin-top: -75%;
+    border-radius: 50%;
+    background-color:var(--forest-green-500);
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+    transform: scale(.33);
+    }
+    80%, 100% {
+    opacity: 0;
     }
 }
 
@@ -122,8 +199,4 @@
 
     
 }
-   
-
-   
-
 }
