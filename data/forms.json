@@ -93,7 +93,6 @@
       { "annex": "declaratie_proprie_raspundere", "required": false }
     ]
   },
-
   "chestionar_energetic_mici_consumatori": {
     "title": "01-03-01_Chestionar enercetic - mici consumatori_rev06",
     "description": "",

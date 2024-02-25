@@ -16,7 +16,6 @@ import { addUser } from "@/actions/user-actions";
 import { initiateFlow } from "@/actions/flow-actions";
 import { toast } from "react-toastify";
 
-
 type Props = {
   case: string;
 };
@@ -54,13 +53,13 @@ const CaseModal = (props: Props) => {
     const uuid = uuidv4();
 
     dispatch(addUser({ id: uuid }));
-    dispatch(initiateFlow())
+    dispatch(initiateFlow());
     router.push(`/utilizator/consumator/${uuid}`);
-    toast.success(`Seccessfully generated user: ${uuid}`,{
-      position:"top-center",
-      autoClose:2000,
-      theme:"dark",
-  })
+    toast.success(`Successfully generated user: ${uuid}`, {
+      position: "top-center",
+      autoClose: 2000,
+      theme: "dark",
+    });
   };
 
   return (
@@ -114,7 +113,7 @@ const CaseModal = (props: Props) => {
           </div>
         </div>
       ) : null}
-      <div className={classes.buttonTitle} onClick={() => setOpen(true)}>
+      <button className={classes.buttonTitle} onClick={() => setOpen(true)}>
         <FolderCheck
           size={16}
           // style={
@@ -125,7 +124,7 @@ const CaseModal = (props: Props) => {
         />
 
         <p>{capitalizeFirstLetter(newCaseTitle)}</p>
-      </div>
+      </button>
       {/* <ResultsTable /> */}
     </>
   );

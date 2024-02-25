@@ -1,0 +1,111 @@
+.componentWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .titleWrapper {
+    display: flex;
+    h3 {
+      font-size: 1.1rem;
+      color: var(--pale-sky-700);
+    }
+  }
+}
+
+.uploadWrapper {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  .info {
+    h3 {
+      font-size: 0.875rem;
+      color: var(--pale-sky-900);
+      font-weight: 600;
+    }
+    h4 {
+      font-size: 0.8rem;
+      color: var(--pale-sky-400);
+    }
+  }
+  .uploadLabel {
+    margin-top: 0.5rem;
+    border: 1px dashed var(--pale-sky-300);
+    border-radius: 3px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .uploadIcon {
+      color: var(--pale-sky-600);
+    }
+
+    h3 {
+      display: flex;
+      max-width: 500px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--pale-sky-800);
+      font-size: 0.8rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--pale-sky-50);
+    }
+  }
+}
+
+.input {
+  display: none;
+}
+
+.populatedInputWrapper {
+  .fileView {
+    background-color: var(--pale-sky-200);
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .fileInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 0.5rem;
+      .fileIcon {
+        fill: var(--pale-sky-500);
+        stroke: var(--pale-sky-200);
+      }
+
+      h3 {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--pale-sky-700);
+      }
+    }
+
+    .deleteIcon {
+      fill: var(--pale-sky-500);
+      stroke: var(--pale-sky-200);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        fill: var(--persian-red-400);
+        stroke: var(--pale-sky-200);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.formSubmitButtonWrapper {
+  display: flex;
+  margin-top: 3rem;
+  border-top: 1px solid var(--pale-sky-50);
+  padding-top: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}

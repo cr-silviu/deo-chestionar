@@ -5,8 +5,9 @@ import cls from "classnames";
 
 interface Props extends React.ComponentPropsWithoutRef<"button"> {
   aspect?: "primary" | "secondary" | "tertiary" | "info" | "warning" | "danger";
-  components: 'icon'|"text";
+  components: "icon" | "text";
   enabled?: boolean;
+  timeout?: number;
 }
 
 const Button = (props: Props) => {

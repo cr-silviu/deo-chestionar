@@ -70,6 +70,12 @@
   --forest-green-950: #092a0b;
 }
 
+body {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

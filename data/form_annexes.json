@@ -2,186 +2,155 @@
   "extras_carte_funciara": {
     "title": "Extras carte funciara",
     "description": "",
-    "type":"upload",
     "details": "Se va atasa doar pentru terenul pe care se va amplasa obiectivul."
   },
   "act_de_identitate": {
     "title": "Act de identitate",
     "description": "",
-    "type":"upload",
     "details": "Buletin sau carte de identitate."
   },
   "copie_cui": {
     "title": "Copie cod unic de inregistrate fiscala(CUI)",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "act_de_proprietate": {
     "title": "Actul de proprietate",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "certificat_urbanism": {
     "title": "Certificatul de urbanism",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "fisa_tehnica_echipament_reincarcare": {
     "title": "Fisa tehnica a echipamentului/statiei de reincarcare",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "aviz_de_amplasare": {
     "title": "Avizul de amplasare",
     "description": "Avizul de amplasare emis de autoritatea administratiei",
-    "type":"upload",
     "details": ""
   },
   "autorizatie_de_construire": {
     "title": "Autorizatie de construire",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "plan_de_situatie": {
     "title": "Planul de situatie",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "extras_de_cont": {
     "title": "Extras de cont",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "certificat_nomenclatura_stradala": {
     "title": "Certificatul de nomenclatura stradala",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "imputernicire": {
     "title": "Imputernicire",
-    "type":"upload",
     "description": "",
     "details": "Pentru atestarea calitatii de deponent"
   },
   "adeverinta_eliberata_administratia_publica": {
     "title": "Adeverinta eliberata de administratia publica locala",
-    "type":"upload",
     "description": "",
     "details": "Se prezinta in lipsa actului de proprietate."
   },
   "declaratie_proprie_raspundere": {
     "title": "Declaratie pe proprie raspundere  autentificata notarial",
-    "type":"upload",
     "description": "",
     "details": "Se prezinta in lipsa actului de proprietate."
   },
   "plan_incadrare_teritoriu": {
     "title": "Plan de incadrare in teritoriu",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "plan_constructii_subterane": {
     "title": "Plan privind consctructiile subterane",
-    "type":"upload",
     "description": "",
     "details": "Doar in cazul in care exista constructii subterane."
   },
   "memoriu_tehnic": {
     "title": "Memoriu tehnic",
-    "type":"upload",
     "description": "",
     "details": "In cazul in care obiectivul pentru care se solicita avizul de amplasament este un proiect tip infrastructura de transport transeuropeana."
   },
   "studiu_coexistenta": {
     "title": "Studiu de coexistenta",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "analiza_risc": {
     "title": "Analiza de risc",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "autorizatie_functionare": {
     "title": "Autorizatie de functionare",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "fisa_reglaje_protectii_instalatie": {
     "title": "Fisa de reglaje protectii din instalatie",
-    "type":"upload",
     "description": "",
     "details": "Pentru prosumatorii racordati la reteaua de JT"
   },
   "dispozitie_reglaje_protectii_DEO": {
     "title": "Dispozitie de reglaje protectii la DEO SA",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "certificat_constatator": {
     "title": "Certificat constatator",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "proces_verbal_confirmare_receptie": {
     "title": "PV confirmare receptie la termen a lucrarii",
-    "type":"upload",
     "description": "",
     "details": "Proces verbal care confirma receptia la termen a lucrarii aferente instalatiei de producere a energiei electrice."
   },
   "buletin_incercare_priza_pamant": {
     "title": "Buletin de incercare a prizei de pamant",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "certificat_conformitate_invertor": {
     "title": "Certificat de conformitatea a invertorului",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "fisa_tehnica_invertor": {
     "title": "Fisa tehnica a invertorului",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "schema_evelcrica_monofilara_instalatie_producere": {
     "title": "Schema electrica monofilara a instalatiei de producere",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "descriere_modificari_natura_tehnica": {
     "title": "Descrierea modificarilor tehnice fata de situatia anterioara",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "acte_doveditoare_modificari_administrative": {
     "title": "Acte doveditoare modificari de natura administrativa",
-    "type":"upload",
     "description": "",
     "details": ""
   },
   "expunere_problema_ce_impune_modificarea_instalatiei": {
-    "title": "Expunere problema a carei rezolvare impune modificarea instalatiei de racordare si documentele ce sustin cererea",  
-    "type":"upload",
+    "title": "Expunere problema a carei rezolvare impune modificarea instalatiei de racordare si documentele ce sustin cererea",
     "description": "",
     "details": ""
   }

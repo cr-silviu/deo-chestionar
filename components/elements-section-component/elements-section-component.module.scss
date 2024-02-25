@@ -1,0 +1,14 @@
+.elementWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+
+  .element {
+    background-color: var(--white-50);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px var(--pale-sky-300);
+  }
+}

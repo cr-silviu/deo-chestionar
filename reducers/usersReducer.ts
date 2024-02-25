@@ -1,14 +1,14 @@
+"use client";
 import { UserActionTypes } from "@/types/userActionTypes";
 
-interface IAction{
+interface IAction {
   type: keyof UserActionTypes;
-  payload:any
+  payload: any;
 }
 
 const reducer = (allUsers = [], action: IAction) => {
   switch (action.type) {
     case "ADD_USER":
-      console.log(action.payload);
       return [...allUsers, action.payload];
     default:
       return allUsers;
