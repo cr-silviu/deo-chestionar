@@ -11,14 +11,14 @@ import { toast } from "react-toastify";
 
 interface IStepComponent extends React.ComponentPropsWithoutRef<"div"> {}
 
-function useNodeCounter(data: any): number {
+function countNodes(data: any): number {
   let countedNodes = 0;
 
   for (let dataPoints of data) {
     countedNodes = countedNodes + 1;
     if (dataPoints.nextSteps) {
       //@ts-ignore
-      countedNodes += useNodeCounter(dataPoints.nextSteps);
+      countedNodes += countNodes(dataPoints.nextSteps);
     }
   }
 
@@ -82,7 +82,7 @@ const StepComponent = () => {
               style={{
                 //@ts-ignore
                 "--max-height": `${
-                  20 * useNodeCounter([processFlow[stepIndex]])
+                  20 * countNodes([processFlow[stepIndex]])
                 }px`,
               }}
             >

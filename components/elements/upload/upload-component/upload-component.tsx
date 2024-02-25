@@ -55,8 +55,6 @@ const UploadField = ({
     );
   };
 
-  console.log(status);
-
   return (
     <div className={classes.uploadWrapper}>
       <div className={classes.info}>
