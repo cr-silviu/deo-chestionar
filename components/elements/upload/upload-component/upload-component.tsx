@@ -18,11 +18,13 @@ const UploadField = ({
   id,
   status,
   metadata,
+  setCardOpen,
 }: {
   id: string;
   title: string;
   status: string;
   metadata: any;
+  setCardOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const dispatch = useAppDispatch();
   const [formData, setFormData] = useState<any>();
@@ -53,6 +55,7 @@ const UploadField = ({
         fileName: formData?.name,
       })
     );
+    setCardOpen(false);
   };
 
   return (
@@ -126,14 +129,23 @@ const UploadComponent = (props: IUploadComponent) => {
 
   return (
     <div className={classes.componentWrapper}>
-      <div className={classes.titleWrapper}>
+      <div
+        className={classes.titleWrapper}
+        onClick={() => setCardOpen(!cardOpen)}
+      >
         <h3>{title}</h3>
         {/* {status === "complete" && !cardOpen ? <BadgeCheck /> : <></>}
         {status === "upcoming" && !cardOpen ? <BadgeMinus /> : <></>} */}
       </div>
-      {/* {cardOpen || status !== "complete" ? ( */}
-      <UploadField title={title} status={status} id={id} metadata={metadata} />
-      {/* ) : null} */}
+      {!cardOpen ? (
+        <UploadField
+          title={title}
+          status={status}
+          id={id}
+          metadata={metadata}
+          setCardOpen={setCardOpen}
+        />
+      ) : null}
     </div>
   );
 };

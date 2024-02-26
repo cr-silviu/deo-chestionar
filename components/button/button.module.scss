@@ -70,3 +70,26 @@
     background-color: var(--forest-green-50);
   }
 }
+
+.loadingIconWrapper {
+  max-width: 0px;
+  overflow: hidden;
+  transition: max-width 0.3s ease-in-out;
+  .loadingIcon {
+    animation: 1.5s spin infinite linear;
+    margin-right: 0.5rem;
+  }
+}
+
+.loadingIconWrapperOpen {
+  max-width: 100px;
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
