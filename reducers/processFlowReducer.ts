@@ -1,13 +1,13 @@
 "use client";
 import { FlowActionTypes } from "@/types/flowActionTypes";
-import { BuildingBlocks } from "@/types/blockTypes";
+import { FlowType, FileUploadBlock } from "@/types/blockTypes";
 
 interface IAction {
   type: keyof FlowActionTypes;
   payload: any;
 }
 
-const processFlow = [
+const processFlow: FlowType = [
   {
     id: "1",
     type: "process",
@@ -28,17 +28,22 @@ const processFlow = [
           details: "",
         },
         nextSteps: [
-          // {
-          //   id: "112",
-          //   type: "form",
-          //   form_name: "form_one",
-          //   status: "awaiting_upload",
-          //   title: "Cerere racordare",
-          //   description: "",
-          // },
+          {
+            id: "110",
+            type: "form",
+            form: "cerere_racordare",
+            metadata: {
+              title: "Cerere de racordare",
+              description: "",
+              details: "",
+            },
+            status: "upcoming",
+          },
           {
             id: "111",
             type: "file",
+            file: "act_de_identitate",
+            status: "current",
             metadata: {
               title: "Act de identitate",
               description: "",
@@ -48,6 +53,8 @@ const processFlow = [
           {
             id: "113",
             type: "file",
+            file: "act_de_proprietate",
+            status: "upcoming",
             metadata: {
               title: "Act de proprietate",
               description: "",
@@ -56,7 +63,9 @@ const processFlow = [
           },
           {
             id: "114",
-            type: "conditional_file",
+            type: "file",
+            file: "certificat_urbanism",
+            status: "current",
             metadata: {
               title: "Certificat de urbanism",
               description: "",
@@ -67,7 +76,8 @@ const processFlow = [
       },
       {
         id: "12",
-        type: "document_check",
+        type: "process",
+        status: "current",
         metadata: {
           title: "Verificare documente",
           description: "",
@@ -77,71 +87,21 @@ const processFlow = [
     ],
   },
   {
-    id: "1",
+    id: "2",
     type: "process",
     status: "upcoming",
     metadata: {
-      title: "Certificat",
+      title: "Emitere ATR",
       description: "",
       details: "",
     },
     nextSteps: [
       {
-        id: "11",
+        id: "211",
         type: "upload",
-        status: "current",
-        metadata: {
-          title: "Incarcare documente",
-          description: "",
-          details: "",
-        },
-        nextSteps: [
-          // {
-          //   id: "112",
-          //   type: "form",
-          //   form_name: "form_one",
-          //   status: "awaiting_upload",
-          //   title: "Cerere racordare",
-          //   description: "",
-          // },
-          {
-            id: "111",
-            type: "file",
-            status: "awaiting_upload",
-            metadata: {
-              title: "Act de identitate",
-              description: "",
-              details: "Buletin sau carte de identitate.",
-            },
-          },
-          {
-            id: "113",
-            type: "file",
-            status: "awaiting_upload",
-            metadata: {
-              title: "Actul de proprietate",
-              description: "",
-              details: "",
-            },
-          },
-          {
-            id: "114",
-            type: "file",
-            status: "awaiting_upload",
-            metadata: {
-              title: "Certificat de urbanism",
-              description: "",
-              details: "",
-            },
-          },
-        ],
-      },
-      {
-        id: "12",
-        type: "document_check",
         status: "upcoming",
         metadata: {
-          title: "Verificare documente",
+          title: "Plata factura",
           description: "",
           details: "",
         },
@@ -150,13 +110,13 @@ const processFlow = [
   },
 ];
 
-const changeElementStatus: any = (
-  tree: any[],
+const changeElementStatus = (
+  tree: FlowType,
   id: string,
-  status: string,
-  fileName?: string
+  status: any,
+  fileName: string
 ) => {
-  let elementsArray: any = [];
+  let elementsArray: FlowType = [];
   for (let node of tree) {
     if (node.nextSteps) {
       elementsArray = [
@@ -164,8 +124,11 @@ const changeElementStatus: any = (
         {
           ...node,
           status: node.id === id ? status : node.status,
+          ...(fileName && {
+            metadata: { ...node.metadata, fileName: fileName },
+          }),
           nextSteps: changeElementStatus(node?.nextSteps, id, status, fileName),
-        },
+        } as FileUploadBlock,
       ];
     } else {
       elementsArray = [
@@ -181,7 +144,7 @@ const changeElementStatus: any = (
   return elementsArray;
 };
 
-const reducer = (flow = [] as BuildingBlocks[], action: IAction) => {
+const reducer = (flow = [] as FlowType, action: IAction) => {
   switch (action.type) {
     case "INITIATE_FLOW":
       return processFlow;

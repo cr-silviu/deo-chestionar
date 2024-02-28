@@ -1,38 +1,35 @@
-import React, { useState, useEffect } from "react";
+"use client";
+import React, { useState } from "react";
 import classes from "./upload-component.module.scss";
+import { FileUploadBlock } from "@/types/blockTypes";
 
-import {
-  UploadCloud,
-  File,
-  XCircle,
-  BadgeCheck,
-  BadgeMinus,
-} from "lucide-react";
-import Button from "@/components/button/button";
+import { toast } from "react-toastify";
+
+import { UploadCloud, File, XCircle } from "lucide-react";
+import Button from "@/components/ui/button/button";
 
 import { useAppDispatch } from "@/hooks/redux-hooks";
-import { changeDocumentStatus } from "@/actions/flow-actions";
+import { changeDocumentStatus } from "@/redux-actions/flow-actions";
 
-const UploadField = ({
-  title,
-  id,
-  status,
-  metadata,
-  setCardOpen,
-}: {
-  id: string;
-  title: string;
-  status: string;
-  metadata: any;
+interface IUploadField extends FileUploadBlock {
   setCardOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+}
+
+const UploadField = (props: IUploadField) => {
+  const { id, status: uploadStatus, metadata, setCardOpen, file } = props;
+  const { title, description, details } = metadata;
+
   const dispatch = useAppDispatch();
-  const [formData, setFormData] = useState<any>();
+  const [formData, setFormData] = useState<Omit<
+    FileUploadBlock["metadata"],
+    "title"
+  > | null>({ fileName: "" });
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (!e.target.files) return;
-    setFormData(e?.target?.files[0]);
+    const fileName = e?.target?.files[0].name;
+    setFormData({ fileName });
   };
 
   const handleClearDocumentField = () => {
@@ -43,18 +40,23 @@ const UploadField = ({
         fileName: "",
       })
     );
-    setFormData(null);
+    setFormData({ fileName: "" });
   };
 
   const submitForm = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
+    if (!formData) return;
     dispatch(
       changeDocumentStatus({
         id,
         status: "complete",
-        fileName: formData?.name,
+        fileName: formData?.fileName,
       })
     );
+    toast.success(`Document incarcat!`, {
+      position: "bottom-left",
+      autoClose: 2000,
+    });
     setCardOpen(false);
   };
 
@@ -69,19 +71,19 @@ const UploadField = ({
         )}
       </div>
 
-      {formData ? (
+      {formData?.fileName ? (
         <div className={classes.populatedInputWrapper}>
           <div className={classes.fileView}>
             <div className={classes.fileInfo}>
               <File className={classes.fileIcon} size={20} />
-              <h3>{formData?.name ?? ""}</h3>
+              <h3>{formData?.fileName ?? ""}</h3>
               <h3>{metadata?.fileName ?? ""}</h3>
             </div>
-            <div onClick={() => handleClearDocumentField()}>
+            <button onClick={() => handleClearDocumentField()}>
               <XCircle size={16} className={classes.deleteIcon} />
-            </div>
+            </button>
           </div>
-          {status === "complete" ? null : (
+          {uploadStatus === "complete" ? null : (
             <div className={classes.formSubmitButtonWrapper}>
               <Button
                 aspect="primary"
@@ -96,7 +98,7 @@ const UploadField = ({
         </div>
       ) : (
         <>
-          <label htmlFor="document" className={classes.uploadLabel}>
+          <label htmlFor={`document:${id}`} className={classes.uploadLabel}>
             <UploadCloud size={32} className={classes.uploadIcon} />
             <h3>
               Apasati sau trageti si eliberati fisierul deasupra campului sau
@@ -105,7 +107,7 @@ const UploadField = ({
             <h4>Dimensiune maxima: 5MB</h4>
           </label>
           <input
-            id="document"
+            id={`document:${id}`}
             onChange={(e) => handleFileUpload(e)}
             type="file"
             className={classes.input}
@@ -116,36 +118,15 @@ const UploadField = ({
   );
 };
 
-interface IUploadComponent {
-  metadata: any;
-  id: string;
-  status: string;
+interface IUploadComponent extends FileUploadBlock {
+  setCardOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
 const UploadComponent = (props: IUploadComponent) => {
-  const [cardOpen, setCardOpen] = useState(false);
-  const { metadata, id, status } = props;
-  const { title }: { title: string } = metadata;
+  const { setCardOpen } = props;
 
   return (
-    <div className={classes.componentWrapper}>
-      <div
-        className={classes.titleWrapper}
-        onClick={() => setCardOpen(!cardOpen)}
-      >
-        <h3>{title}</h3>
-        {/* {status === "complete" && !cardOpen ? <BadgeCheck /> : <></>}
-        {status === "upcoming" && !cardOpen ? <BadgeMinus /> : <></>} */}
-      </div>
-      {!cardOpen ? (
-        <UploadField
-          title={title}
-          status={status}
-          id={id}
-          metadata={metadata}
-          setCardOpen={setCardOpen}
-        />
-      ) : null}
+    <div>
+      <UploadField {...props} setCardOpen={setCardOpen} />
     </div>
   );
 };

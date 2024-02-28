@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { useAppDispatch } from "@/hooks/redux-hooks";
 
-import { initiateFlow } from "@/actions/flow-actions";
+import { initiateFlow } from "@/redux-actions/flow-actions";
 
 interface Props extends React.ComponentPropsWithoutRef<"nav"> {}
 

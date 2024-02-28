@@ -12,3 +12,42 @@
     box-shadow: 0 10px 15px var(--pale-sky-300);
   }
 }
+
+.componentWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    h3 {
+      font-size: 1.1rem;
+      color: var(--pale-sky-700);
+    }
+
+    .checkIcon {
+      fill: var(--white-50);
+      stroke: var(--forest-green-500);
+    }
+
+    .waitingActionIcon {
+      fill: var(--white-50);
+      stroke: var(--pale-sky-200);
+    }
+  }
+}
+
+.componentCardWrapper {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 0px;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+.elementOpen {
+  max-height: 1000px;
+}

@@ -1,37 +1,64 @@
 "use client";
 import { useFlowElementBuilder } from "@/hooks/useFlowElementBuilder";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./elements-section-component.module.scss";
+import cls from "classnames";
 
-type Props = {};
+import Divider from "@/components/ui/divider/divider";
 
-import { useAppSelector } from "@/hooks/redux-hooks";
+import { CheckCircle, CircleEllipsis } from "lucide-react";
 
-const ElementsSectionComponents = (props: Props) => {
-  const elementsList = useFlowElementBuilder();
+import { BuildingBlocks, FlowType } from "@/types/blockTypes";
+
+const ElementsRenderingComponent = (props: IElement) => {
+  const [cardOpen, setCardOpen] = useState<boolean>(true);
+  const { metadata, status, component: Component } = props;
+
+  return (
+    <div className={classes.componentWrapper}>
+      <button
+        className={classes.titleWrapper}
+        onClick={() => setCardOpen(!cardOpen)}
+      >
+        <h3>{metadata.title}</h3>
+        {status === "complete" ? (
+          <CheckCircle className={classes.checkIcon} />
+        ) : (
+          <CircleEllipsis className={classes.waitingActionIcon} />
+        )}
+      </button>
+      {Component ? (
+        <div
+          className={cls(
+            classes.componentCardWrapper,
+            cardOpen ? classes.elementOpen : null
+          )}
+        >
+          <div>
+            <Divider />
+            <Component {...props} setCardOpen={setCardOpen} />
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+type IElement = BuildingBlocks & {
+  component?: React.ElementType;
+};
+const ElementsSectionComponents = () => {
+  const elementsList: FlowType = useFlowElementBuilder();
 
   return (
     <div className={classes.elementWrapper}>
-      {elementsList?.map(
-        (
-          {
-            id,
-            metadata,
-            status,
-            component: Component,
-          }: {
-            id: string;
-            status: string;
-            metadata: any;
-            component: React.ElementType;
-          },
-          index: number
-        ) => (
-          <div className={classes.element} key={index}>
-            <Component metadata={metadata} status={status} id={id} />
-          </div>
-        )
-      )}
+      {elementsList?.map((item: IElement) => (
+        <div className={classes.element} key={item.id}>
+          {item.component ? (
+            <ElementsRenderingComponent {...item} component={item.component} />
+          ) : null}
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,20 +1,6 @@
-.componentWrapper {
-  display: flex;
-  flex-direction: column;
-
-  .titleWrapper {
-    display: flex;
-    h3 {
-      font-size: 1.1rem;
-      color: var(--pale-sky-700);
-    }
-  }
-}
-
 .uploadWrapper {
-  margin-top: 1rem;
-  padding: 1rem 0;
   .info {
+    margin-top: 1rem;
     h3 {
       font-size: 0.875rem;
       color: var(--pale-sky-900);

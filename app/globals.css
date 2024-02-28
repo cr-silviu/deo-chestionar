@@ -68,6 +68,18 @@
   --forest-green-800: #1f5c20;
   --forest-green-900: #1b4c1c;
   --forest-green-950: #092a0b;
+
+  --dodger-blue-50: #eff8ff;
+  --dodger-blue-100: #def0ff;
+  --dodger-blue-200: #b6e2ff;
+  --dodger-blue-300: #75cdff;
+  --dodger-blue-400: #2cb4ff;
+  --dodger-blue-500: #009fff;
+  --dodger-blue-600: #007ad4;
+  --dodger-blue-700: #0061ab;
+  --dodger-blue-800: #00528d;
+  --dodger-blue-900: #064574;
+  --dodger-blue-950: #042b4d;
 }
 
 body {

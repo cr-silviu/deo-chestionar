@@ -10,10 +10,10 @@ import { useAppDispatch } from "@/hooks/redux-hooks";
 import cases from "@/data/cases.json";
 
 import ResultsTable from "@/components/results-table/results-table";
-import Button from "@/components/button/button";
+import Button from "@/components/ui/button/button";
 
-import { addUser } from "@/actions/user-actions";
-import { initiateFlow } from "@/actions/flow-actions";
+import { addUser } from "@/redux-actions/user-actions";
+import { initiateFlow } from "@/redux-actions/flow-actions";
 import { toast } from "react-toastify";
 
 type Props = {

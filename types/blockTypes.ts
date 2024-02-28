@@ -1,41 +1,66 @@
+export type MetadataType = {
+  title: string;
+  description?: string;
+  details?: string;
+};
 
-export type UploadBlock={
-    id:string;
-    type:"upload";
-    title:string;
-    description?:string;
-    tag?:string;
-    status:"complete"|"current"|"skipped"|"upcoming"
-}
+export type UploadBlock = {
+  id: string;
+  type: "upload";
+  metadata: MetadataType;
+  status: "complete" | "current" | "skipped" | "upcoming";
+  nextSteps?: FlowType;
+};
 
-export type FormBlock={
-    id:string;
-    type:"form";
-    title:string;
-    description?:string;
-    tag?:string;
-    status:"complete"|"current"|"skipped"|"upcoming"
-}
+export type IFileUploadBlockMetadata = MetadataType & {
+  fileName?: string;
+  fileId?: string;
+};
+export type FileUploadBlock = {
+  id: string;
+  type: "file";
+  file: string;
+  metadata: IFileUploadBlockMetadata;
+  status: "complete" | "current" | "skipped" | "upcoming";
+  nextSteps?: FlowType;
+};
 
-export type InvoiceBlock={
-    id:string;
-    type:"invoice";
-    title:string;
-    description?:string;
-    tag?:string;
-    status:"complete"|"current"|"skipped"|"upcoming"
-}
+export type FormBlock = {
+  id: string;
+  type: "form";
+  form: string;
+  metadata: MetadataType;
+  status: "complete" | "current" | "skipped" | "upcoming";
+  nextSteps?: FlowType;
+};
 
-export type ProcessBlock={
-    id:string;
-    type:"process";
-    title:string;
-    description?:string;
-    tag?:string;
-    status:"complete"|"current"|"skipped"|"upcoming";
-    nextSteps?:NextStepsType
-}
+export type InvoiceBlock = {
+  id: string;
+  type: "invoice";
+  metadata: MetadataType;
+  status: "complete" | "current" | "skipped" | "upcoming";
+  nextSteps?: FlowType;
+};
 
-export type BuildingBlocks = ProcessBlock|InvoiceBlock|FormBlock|UploadBlock;
+export type ProcessBlock = {
+  id: string;
+  type: "process";
+  metadata: MetadataType;
+  status: "complete" | "current" | "skipped" | "upcoming";
+  nextSteps?: FlowType;
+};
 
-export type NextStepsType = (ProcessBlock|InvoiceBlock|FormBlock|UploadBlock)[]
+export type BuildingBlocks =
+  | ProcessBlock
+  | InvoiceBlock
+  | FormBlock
+  | FileUploadBlock
+  | UploadBlock;
+
+export type FlowType = (
+  | ProcessBlock
+  | InvoiceBlock
+  | FormBlock
+  | FileUploadBlock
+  | UploadBlock
+)[];

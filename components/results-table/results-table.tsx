@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import classes from "./results-table.module.scss";
 import forms from "@/data/forms.json";
 import annexes from "@/data/form_annexes.json";
-import cls from "classnames";
 
 import { ClipboardType, FileUp } from "lucide-react";
 

@@ -1,17 +1,17 @@
 "use client";
-import { NextStepsType } from "@/types/blockTypes";
 import cls from "classnames";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./step-component.module.scss";
-
 import { Check, Dot, CheckCircle2 } from "lucide-react";
+
+import { BuildingBlocks, FlowType } from "@/types/blockTypes";
 
 import { useAppSelector } from "@/hooks/redux-hooks";
 import { toast } from "react-toastify";
 
 interface IStepComponent extends React.ComponentPropsWithoutRef<"div"> {}
 
-function countNodes(data: any): number {
+function countNodes(data: FlowType): number {
   let countedNodes = 0;
 
   for (let dataPoints of data) {
@@ -54,7 +54,7 @@ const StepComponent = () => {
 
   return (
     <div className={classes.componentWrapper}>
-      {processFlow?.map((step: any, stepIndex: number) => {
+      {processFlow?.map((step, stepIndex: number) => {
         const isLastChild = stepIndex === processFlow?.length - 1;
 
         return (
@@ -63,7 +63,7 @@ const StepComponent = () => {
               classes.step,
               handleStatus(stepIndex) === "current" ? classes.stickyStep : null
             )}
-            key={stepIndex}
+            key={step.id}
             onClick={() => handleSelectedItem(stepIndex)}
           >
             <PrimaryComponent
@@ -86,11 +86,7 @@ const StepComponent = () => {
                 }px`,
               }}
             >
-              <SecondaryComponent
-                type={step.type}
-                nextSteps={step.nextSteps}
-                noPadding={true}
-              />
+              <SecondaryComponent nextSteps={step.nextSteps} noPadding={true} />
 
               <div
                 className={classes.secondaryComponentMarker}
@@ -117,7 +113,7 @@ const StepComponent = () => {
 interface IPrimaryComponent extends React.ComponentPropsWithoutRef<"div"> {
   title: string;
   index: number;
-  primaryStatus: "complete" | "current" | "skipped" | "upcoming";
+  primaryStatus: BuildingBlocks["status"];
 }
 
 const PrimaryComponent = (props: IPrimaryComponent) => {
@@ -158,10 +154,8 @@ const PrimaryComponent = (props: IPrimaryComponent) => {
 };
 
 interface ISecondaryComponent extends React.ComponentPropsWithoutRef<"div"> {
-  nextSteps?: NextStepsType;
-  type: "process" | "invoice" | "upload" | "form";
+  nextSteps?: FlowType;
   noPadding?: boolean;
-  status?: "complete" | "current" | "skipped" | "upcoming";
 }
 
 const SecondaryComponent = (props: ISecondaryComponent) => {
@@ -170,13 +164,13 @@ const SecondaryComponent = (props: ISecondaryComponent) => {
 
   return (
     <div className={classes.secondaryComponentWrapper}>
-      {nextSteps?.map((step: any, index) => (
+      {nextSteps?.map((step, index) => (
         <div
           className={cls(
             classes.secondaryComponentListWrapper,
             noPadding ? classes.noPadding : classes.padding
           )}
-          key={index}
+          key={step.id}
         >
           <div className={classes.secondaryComponentListItem}>
             {step?.status === "complete" ? (
@@ -186,11 +180,7 @@ const SecondaryComponent = (props: ISecondaryComponent) => {
             )}
             <p>{step?.metadata?.title}</p>
           </div>
-          <SecondaryComponent
-            type={step.type}
-            nextSteps={step?.nextSteps}
-            status={step?.status}
-          />
+          <SecondaryComponent nextSteps={step?.nextSteps} />
         </div>
       ))}
     </div>

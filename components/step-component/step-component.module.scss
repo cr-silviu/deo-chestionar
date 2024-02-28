@@ -17,9 +17,6 @@
   }
 }
 
-.stickyStep {
-}
-
 .primaryComponentWrapper {
   display: flex;
   flex-direction: row;
@@ -73,7 +70,7 @@
 
       color: var(--pale-sky-50);
       font-weight: 400;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
 
     .bubbleComplete {
