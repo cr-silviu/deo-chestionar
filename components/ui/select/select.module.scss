@@ -1,0 +1,74 @@
+.selectTrigger {
+  // "flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  border-radius: 3px;
+  border: 1px solid var(--pale-sky-100);
+
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--pale-sky-700);
+}
+
+.selectTrigger:focus {
+  outline: none;
+
+  border: 1px solid var(--forest-green-500);
+  font-weight: 400;
+}
+
+.selectTrigger::placeholder {
+  color: var(--pale-sky-100);
+  font-weight: 300;
+}
+
+.selectContent {
+  //   data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+
+  position: relative;
+  z-index: 50;
+  max-height: 200px;
+  min-width: 8rem;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid var(--pale-sky-100);
+  background-color: var(--white-50);
+  box-shadow: 0 0 15px var(--pale-sky-300);
+  color: var(--pale-sky-600);
+
+  [data-state="open"] {
+  }
+}
+.contentPopper {
+  // "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+}
+
+.viewportPopper {
+  // "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+  height: var(--radix-select-trigger-height);
+  width: 100%;
+  min-width: var(--radix-select-trigger-width);
+}
+
+.item {
+  //  data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+  position: relative;
+  display: flex;
+  width: 100%;
+  user-select: none;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.item:focus {
+  cursor: pointer;
+  background-color: var(--pale-sky-100);
+  color: var(--pale-sky-500);
+}

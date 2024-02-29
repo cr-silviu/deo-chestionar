@@ -1,2 +1,28 @@
 .form {
 }
+
+.radioGroupItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.radioGroupItemWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radioGroupLabel {
+  color: var(--pale-sky-500);
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .span {
+    font-weight: bold;
+    color: var(--pale-sky-800);
+  }
+}
