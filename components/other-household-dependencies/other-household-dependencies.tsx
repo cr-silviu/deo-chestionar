@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import classes from './other-household-dependencies.module.scss'
 import {Pencil, Trash2} from 'lucide-react'
+import Modal from "@/components/other-household-dependencies/modal/modal"
 
 
 interface IOtherHouseholdDependencties{
@@ -9,9 +10,22 @@ interface IOtherHouseholdDependencties{
 }
 
 const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
-    const [dependencies, setDependencies] = useState([])
+    const [data, setData] = useState([{
+        name:"",
+        number:0,
+        power:10
+    },
+    {
+        name:"",
+        number:0,
+        power:10
+    },{
+        name:"",
+        number:0,
+        power:10
+    }])
     const [piTotal, setPiTotal] = useState()
-    
+
     useEffect(()=>{
 
     },[])
@@ -37,7 +51,7 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    {/* <tr>
                         <td>
                             Bucatarie
                         </td> 
@@ -53,8 +67,9 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
                         <Trash2 size={16} className={classes.deleteIcon}/>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
+                    </tr> */}
+                    {data?.map((item, index)=>(
+                    <tr key={index}>
                         <td>
                             Bucatarie
                         </td> 
@@ -66,11 +81,14 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
                         </td>
                         <td className={classes.tdActions}>
                         <div className={classes.actionsWrapper}>
-                        <Pencil size={16} className={classes.editIcon}/>
+                        <Modal modalData={item} index={index}>
+                            <Pencil size={16} className={classes.editIcon}/>
+                        </Modal>
                         <Trash2 size={16} className={classes.deleteIcon}/>
                             </div>
                         </td>
                     </tr>
+                    ))}
                 </tbody>
             </table>
         </div>

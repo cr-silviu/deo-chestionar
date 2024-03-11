@@ -4,7 +4,7 @@ import classes from "./input.module.scss";
 import { Controller } from "react-hook-form";
 
 type Props = React.ComponentPropsWithoutRef<"input"> & {
-  control: any;
+  control?: any;
   name: string;
   unit?:string
 };
