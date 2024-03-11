@@ -1,0 +1,73 @@
+.bodyWrapper{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+
+    table{
+        width:100%;
+        thead{
+            background-color: var(--pale-sky-800);
+
+            tr{
+                width:100%;
+                th{
+                    text-align: left;
+                    padding: 0.25rem 0.5rem;
+                    color:var(--pale-sky-50);
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                }
+
+                th:first-child{
+                border-radius:5px 0 0 0;
+                }
+
+                th:last-child{
+                border-radius:0 5px 0 0;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+                border:1px solid var(--pale-sky-100);
+                td{
+                    padding: 0.25rem 0.5rem;
+                    font-size: 0.875rem;
+                    color:var(--pale-sky-800);
+                }
+            }
+        }
+    }
+}
+
+.tdActions{
+max-width: 2rem;
+
+
+.actionsWrapper{
+    display:flex;
+    flex-direction: row;
+    gap:0.5rem;
+
+    .editIcon{
+        color:var(--dodger-blue-400);
+        transition:  all 0.3s ease-in-out;
+
+        &:hover{
+            cursor:pointer;
+            color:var(--dodger-blue-600);
+
+        }
+    }
+    
+    .deleteIcon{
+        color: var(--persian-red-400);
+        transition:  all 0.3s ease-in-out;
+        &:hover{
+            cursor:pointer;
+            color:var(--persian-red-600);
+        }
+    }
+}
+}

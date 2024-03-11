@@ -10,6 +10,7 @@ import {
   RadioGroup,
   RadioGroupItem,
 } from "@/components/ui/radio-group/radio-group";
+import OtherHouseholdDependencties from "@/components/other-household-dependencies/other-household-dependencies";
 
 interface ICerereRacordare extends React.ComponentPropsWithoutRef<"form"> {
   setCardOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -63,7 +64,12 @@ const CerereRacordare = (props: ICerereRacordare) => {
       stradaDomiciliu: "",
       stradaLC: "",
       telefon: "",
-      tipBransament: "trifazat",
+      tipBransament: "monofazat",
+      punctReincarcareVehiculeElectrice:"NU",
+      numarPuncteReincarcareVehiculeElectrice:null,
+      putereInstalataEchipamentReincarcare:null,
+      putereMaxismAbsorbitaSimultan:null,
+      tipStatieReincarcare:"incarcare_lenta"
     },
   });
 
@@ -75,7 +81,16 @@ const CerereRacordare = (props: ICerereRacordare) => {
 
   const handleScopSolicitare = (value: string) => {
     setValue("scopulSolicitarii", value);
+    setValue("punctReincarcareVehiculeElectrice", "NU")
   };
+
+  const hanldlePunctReincarcareVehiculeElectrivce = (value:string)=>{
+    setValue("punctReincarcareVehiculeElectrice", value)
+  }
+
+  const handleTipStatieReincarcare=(value:string)=>{
+    setValue("tipStatieReincarcare", value)
+  }
 
   return (
     <form {...props} className={classes.form}>
@@ -363,9 +378,9 @@ const CerereRacordare = (props: ICerereRacordare) => {
           <FieldSet columnNumber={1}>
             <Field label="Loc de consum cu punct/puncte de reincarcare pentru vehicule electrice?">
               <RadioGroup
-                // defaultValue={getValues("scopulSolicitarii")}
+                defaultValue={getValues("punctReincarcareVehiculeElectrice")}
                 className={classes.radioGroupItem}
-                // onValueChange={(e) => handleScopSolicitare(e)}
+                onValueChange={(e) => hanldlePunctReincarcareVehiculeElectrivce(e)}
               >
                 <div className={classes.radioGroupItemWrapper}>
                   <RadioGroupItem value="DA" id="ptrve1" />
@@ -375,7 +390,7 @@ const CerereRacordare = (props: ICerereRacordare) => {
                 </div>
                 <div className={classes.radioGroupItemWrapper}>
                   <RadioGroupItem value="NU" id="ptrve3" />
-                  <Label htmlFor="ptrve2" className={classes.radioGroupLabel}>
+                  <Label htmlFor="ptrve3" className={classes.radioGroupLabel}>
                     Nu.
                   </Label>
                 </div>
@@ -383,6 +398,73 @@ const CerereRacordare = (props: ICerereRacordare) => {
             </Field>
           </FieldSet>
         ) : null}
+       
+      </FieldSection>
+      {
+          getValues("punctReincarcareVehiculeElectrice") === "DA" ? 
+          <FieldSection label="Informatii punct de reincarcare vehicule electrice">
+            <FieldSet columnNumber={1}>
+            <Field label="Numar puncte de reincarcare pentru vehiculele electrice">
+            <Input
+              placeholder="Numar puncte reincarcare vehicule electrice"
+              control={control}
+              type="number"
+              name="numarPuncteReincarcareVehiculeElectrice"
+            />
+          </Field>
+            </FieldSet>
+            <FieldSet columnNumber={1}>
+            <Field label="Putere instalata a unui echipament/statie de reincarcare">
+            <Input
+              placeholder="Putere instalata"
+              unit="kW:"
+              control={control}
+              type="number"
+              name="putereInstalataEchipamentReincarcare"
+            />
+          </Field>
+            </FieldSet>
+            <FieldSet columnNumber={1}>
+            <Field label="Putere maxim simultan absorbita de punctele de reincarcare">
+            <Input
+              placeholder="Maximum putere absorbita"
+              unit="kW:"
+              control={control}
+              type="number"
+              name="putereMaxismAbsorbitaSimultan"
+            />
+          </Field>
+            </FieldSet>
+
+          <FieldSet columnNumber={1}>
+          <Field label="Tip statie de reincarcare:">
+            <RadioGroup
+              defaultValue={getValues("tipStatieReincarcare")}
+              className={classes.radioGroupItem}
+              onValueChange={(e) => handleTipStatieReincarcare(e)}
+            >
+              <div className={classes.radioGroupItemWrapper}>
+                <RadioGroupItem value="incarcare_lenta" id="tsr1" />
+                <Label htmlFor="tsr1" className={classes.radioGroupLabel}>
+                  Incarcare lenta;
+                </Label>
+              </div>
+              <div className={classes.radioGroupItemWrapper}>
+                <RadioGroupItem value="incarcare_rapida" id="tsr2" />
+                <Label htmlFor="tsr2" className={classes.radioGroupLabel}>
+                  Incarcare rapida;
+                </Label>
+              </div>
+            </RadioGroup>
+          </Field>
+        </FieldSet>
+          </FieldSection>
+
+          :null
+        }
+
+    <FieldSection label="Compozitie locuinta">
+         <OtherHouseholdDependencties/>
       </FieldSection>
     </form>
   );

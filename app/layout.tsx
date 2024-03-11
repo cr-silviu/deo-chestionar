@@ -24,7 +24,9 @@ export default function RootLayout({
         <body className={inter.className}>
           <ToastContainer />
           {children}
+          <div id="myportal" />
         </body>
+        
       </html>
     </StoreProvider>
   );
