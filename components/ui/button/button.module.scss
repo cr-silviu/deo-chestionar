@@ -39,14 +39,13 @@
 }
 
 .secondary {
-  background-color: var(--forest-green-100);
-  color: var(--forest-green-800);
+  background-color: var(--pale-sky-100);
+  color: var(--pale-sky-800);
   font-weight: 400;
 
   &:hover {
     cursor: pointer;
-    background-color: var(--forest-green-50);
-    color: var(--forest-green-900);
+    background-color: var(--pale-sky-200);
   }
 }
 

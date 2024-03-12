@@ -116,16 +116,11 @@ const CaseModal = (props: Props) => {
       <button className={classes.buttonTitle} onClick={() => setOpen(true)}>
         <FolderCheck
           size={16}
-          // style={
-          //   currentCase?.documents?.length
-          //     ? { color: "rgba(0,0,0,0.5)" }
-          //     : { color: "transparent" }
-          // }
+      
         />
 
         <p>{capitalizeFirstLetter(newCaseTitle)}</p>
       </button>
-      {/* <ResultsTable /> */}
     </>
   );
 };

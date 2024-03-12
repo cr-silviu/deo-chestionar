@@ -16,7 +16,18 @@
                     color:var(--pale-sky-50);
                     font-weight: 400;
                     font-size: 0.9rem;
+
                 }
+
+                .powerCell{
+                    text-align:center;
+                }
+
+                .totalPowerCell{
+                    text-align: center;
+                }
+
+               
 
                 th:first-child{
                 border-radius:5px 0 0 0;
@@ -35,6 +46,94 @@
                     padding: 0.25rem 0.5rem;
                     font-size: 0.875rem;
                     color:var(--pale-sky-800);
+
+                    .quantityWrapper{
+                        display:flex;
+                        flex-direction:row;
+                        align-items: center;
+                        gap: 0.7rem;
+                        user-select:none;
+
+                        .minusIcon{
+                            color: var(--pale-sky-300);
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover{
+                                cursor:pointer;
+                                color: var(--pale-sky-500);
+                            }
+                        }
+
+                        .plusIcon{
+                            color: var(--pale-sky-300);
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover{
+                                cursor:pointer;
+                                color: var(--pale-sky-500);
+                            }
+                        }
+                    }
+                }
+
+
+                .powerCell{
+                    text-align:center;
+                }
+
+                .totalPowerCell{
+                    text-align: center;
+                }
+            }
+        }
+
+        tfoot{
+            tr{
+                .totalTitleCell{
+                    padding-top: 0.5rem;
+                    font-size:0.875rem;
+                    text-align: center;
+                    color: var(--pale-sky-700);
+                    border-bottom: 1px solid var(--pale-sky-400)
+                }
+
+                .totalValueCell{
+                    padding-top: 0.5rem;
+                    font-size: 0.875rem;
+                    color:var(--pale-sky-500);
+                    text-align:center;
+                    border-bottom: 1px solid var(--pale-sky-400)
+                }
+            }
+
+            .addButtonTd{
+                text-align:center;
+                padding: 0.25rem 0.5rem;
+                .addButton{
+                    border:1px dashed var(--pale-sky-500);
+                    border-radius: 3px;
+                    padding: 0.25rem 0.5rem;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    transition: all 0.3s ease-in-out;
+                    user-select:none;
+
+                    .addIcon{
+                        color:var(--pale-sky-700)
+                    }
+
+                    h3{
+                        font-size: 0.8rem;
+                        color: var(--pale-sky-700);
+                        font-weight: 500;
+                    }
+
+                    &:hover{
+                        cursor:pointer;
+                        background-color: var(--pale-sky-100);
+                    }
                 }
             }
         }

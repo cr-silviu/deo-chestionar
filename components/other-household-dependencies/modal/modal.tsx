@@ -3,16 +3,24 @@ import React, {useEffect, useRef, useState} from 'react'
 import classes from './modal.module.scss'
 import { createPortal } from "react-dom";
 import {X} from 'lucide-react'
+import {Field, FieldSet } from "@/components/ui/field/field"
+import Input from "@/components/ui/input/input"
+import Button from "@/components/ui/button/button"
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 
+
+interface IModalData{
+name:string,
+quantity?:number;
+power: number
+index?:number       
+}
 
 interface IModalWrapper extends React.ComponentPropsWithoutRef<"div">{
-modalData:{
-name:string,
-number:number;
-power: number
+modalData?:IModalData;
+onConfirm:(data: IModalData)=>void;
 }
-index: number;
-}
+
 const ModalWrapper = (props:IModalWrapper)=>{
     const ref = useRef<Element| null>();
     const [open, setOpen] = useState(false)
@@ -30,7 +38,7 @@ const ModalWrapper = (props:IModalWrapper)=>{
     }
     return <div className={classes.wrapper} >
         {ref.current && open ? 
-        createPortal(<Modal handleModalClose={handleModalClose}/>, ref.current) : null}
+        createPortal(<Modal modalData={props?.modalData} handleModalClose={handleModalClose} onConfirm={props.onConfirm}/>, ref.current) : null}
         <div onClick={()=> openModalHandler()}>
             {props.children}
         </div>
@@ -41,16 +49,85 @@ const ModalWrapper = (props:IModalWrapper)=>{
 
 interface IModal extends React.ComponentPropsWithoutRef<"div">{
 handleModalClose:()=>void;
+onConfirm:(data: IModalData)=>void;
+modalData?: IModalData;
 }
 
 const Modal = (props:IModal)=>{
+    const {
+        register,
+        handleSubmit,
+        watch,
+        getValues,
+        setValue,
+        control,
+        formState: { errors },
+      } = useForm({defaultValues:{
+      name:"",
+      power: 0
+      }})
+
+      const {modalData} = props
+      const{name, quantity, power} = modalData ?? {}
+  
+    useEffect(()=>{
+        if(!props.modalData) return;
+        setValue("name", name!);
+        setValue("power", power!);
+    },[])
+
+    const handleConfirm=()=>{
+
+        if(props.modalData){
+            props.onConfirm({...props?.modalData, ...getValues(), power:Number(getValues("power"))})
+        }
+        if(!props.modalData){
+            props.onConfirm({...getValues(), power:Number(getValues("power"))})
+        }
+      props.handleModalClose()
+    }
+
+
     return <div className={classes.modalWrapper}>
             <div className={classes.backdrop} onClick={()=>props.handleModalClose()}/>
             <div className={classes.modal}>
                 <div className={classes.modalTitle}>
-                    <h3>Vedem</h3>
-                    <X />
+                    <h3>{props?.modalData ? "Editeaza dependinta" : "Adauga dependinta"}</h3>
+                    <X className={classes.closeIcon} 
+                    onClick={() => props.handleModalClose()}/>
                 </div>
+
+                <div className={classes.bodyWrapper}>
+                <FieldSet>
+                <Field label="Denumire"> 
+                    <Input  name="name" control={control} />
+                </Field>
+                <Field label="Putere per unitate"> 
+                    <Input  unit="kW:" name='power' control={control} {... {valueAsNumber: true}}/>
+                </Field>
+                </FieldSet>
+                </div>
+
+                <div className={classes.footerWrapper}>
+                <Button
+                    aspect="secondary"
+                    components="text"
+                    onClick={() => props.handleModalClose()}
+                  >
+                    Anuleaza
+                  </Button>
+                <Button
+                    aspect="primary"
+                    components="text"
+                    timeout={1000}
+                    onClick={() => handleConfirm()}
+                  >
+                    {props?.modalData ? "Salveaza" : "Adauga"}
+                  </Button>
+
+                 
+                </div>
+
             </div>
     </div>
 }
