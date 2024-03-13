@@ -87,10 +87,13 @@ const Modal = (props:IModal)=>{
       props.handleModalClose()
     }
 
+    useEffect(()=>{
+    console.log(errors) 
+    },[errors])
 
     return <div className={classes.modalWrapper}>
             <div className={classes.backdrop} onClick={()=>props.handleModalClose()}/>
-            <div className={classes.modal}>
+            <form className={classes.modal} onSubmit={handleSubmit(handleConfirm)}>
                 <div className={classes.modalTitle}>
                     <h3>{props?.modalData ? "Editeaza dependinta" : "Adauga dependinta"}</h3>
                     <X className={classes.closeIcon} 
@@ -99,11 +102,13 @@ const Modal = (props:IModal)=>{
 
                 <div className={classes.bodyWrapper}>
                 <FieldSet>
-                <Field label="Denumire"> 
-                    <Input  name="name" control={control} />
+                <Field label="Denumire" > 
+                    <Input  name="name" 
+                    required
+                    control={control} />
                 </Field>
                 <Field label="Putere per unitate"> 
-                    <Input  unit="kW:" name='power' control={control} {... {valueAsNumber: true}}/>
+                    <Input  unit="kW:" name='power' required control={control} {... {valueAsNumber: true}}/>
                 </Field>
                 </FieldSet>
                 </div>
@@ -112,6 +117,7 @@ const Modal = (props:IModal)=>{
                 <Button
                     aspect="secondary"
                     components="text"
+                    type="button"
                     onClick={() => props.handleModalClose()}
                   >
                     Anuleaza
@@ -119,8 +125,7 @@ const Modal = (props:IModal)=>{
                 <Button
                     aspect="primary"
                     components="text"
-                    timeout={1000}
-                    onClick={() => handleConfirm()}
+                    type="submit"
                   >
                     {props?.modalData ? "Salveaza" : "Adauga"}
                   </Button>
@@ -128,7 +133,7 @@ const Modal = (props:IModal)=>{
                  
                 </div>
 
-            </div>
+            </form>
     </div>
 }
 

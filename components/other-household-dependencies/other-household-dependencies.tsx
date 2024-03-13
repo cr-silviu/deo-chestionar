@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import classes from './other-household-dependencies.module.scss'
 import {Pencil, Trash2,Minus, Plus} from 'lucide-react'
 import Modal from "@/components/other-household-dependencies/modal/modal"
-
+import Popconfirm from "@/components/ui/popconfirm/popconfirm"
 
 interface IOtherHouseholdDependencties{
 
@@ -52,12 +52,20 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
         power: number,
         index?: number      
     })=>{
-        if(!data?.quantity) return;
+        console.log(data)
+        if(data?.quantity){
         const dataIndex = data.index;
         delete data["index"]
-        if(data.quantity){
         setData((prevData)=> prevData.map((item, index)=> index === dataIndex ? data as IDependency : item))
         }
+
+        if(!data?.quantity){
+            setData((prevData)=>[...prevData, {...data, quantity:1}])
+        }
+    }
+
+    const handleDeleteDependency=(dependencyIndex:number)=>{
+        setData((prevData)=>prevData?.filter((item, index)=>index !== dependencyIndex))
     }
 
     return <div className={classes.componentWrapper}>
@@ -97,10 +105,10 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
                             </div>
                         </td>
                          <td className={classes.powerCell}>
-                           {`${item?.power} kW`}
+                           {`${item?.power.toFixed(2)} kW`}
                         </td>
                         <td className={classes.totalPowerCell}>
-                            {`${Number(item.quantity * item.power)} kw`}
+                            {`${Number(item.quantity * item.power).toFixed(2)} kw`}
                         </td>
                         <td className={classes.tdActions}>
                         <div className={classes.actionsWrapper}>
@@ -109,7 +117,16 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
                         >
                             <Pencil size={14} className={classes.editIcon}/>
                         </Modal>
+                        <Popconfirm
+                        onConfirm={()=>handleDeleteDependency(index)}
+                        title="Stergere dependinta"
+                        description="Sigur doriti sa stergeti aceasta dependinta?"
+                        okText="Sterge"
+                        cancelText="Anuleaza"
+                        aspect="distructive"
+                        >
                         <Trash2 size={14} className={classes.deleteIcon}/>
+                        </Popconfirm>
                             </div>
                         </td>
                     </tr>
@@ -132,7 +149,7 @@ const OtherHouseholdDependencties = (props:IOtherHouseholdDependencties)=>{
                         </th>
                         <th></th>
                         <th className={classes.totalTitleCell}>Total:</th>
-                        <th className={classes.totalValueCell}>{`${data?.reduce((data, item)=>(item.power * item.quantity) + data,0)} kW`}</th>
+                        <th className={classes.totalValueCell}>{`${data?.reduce((data, item)=>(item.power * item.quantity) + data,0).toFixed(2)} kW`}</th>
                         <th></th>
                     </tr>
                 </tfoot>

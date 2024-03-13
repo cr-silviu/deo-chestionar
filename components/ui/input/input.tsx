@@ -3,16 +3,17 @@ import React from "react";
 import classes from "./input.module.scss";
 import { Controller } from "react-hook-form";
 
-type Props = React.ComponentPropsWithoutRef<"input"> & {
+type Props = React.ComponentPropsWithRef<"input"> & {
   control?: any;
   name: string;
-  unit?:string
+  unit?:string;
 };
 
 const Input = (props: Props) => {
 
   return (
     <Controller
+      {...props}
       control={props.control}
       name={props.name}
       render={({ field }) => (
