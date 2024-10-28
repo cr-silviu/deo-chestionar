@@ -99,14 +99,7 @@ const CaseModal = (props: Props) => {
                   <ResultsTable documents={currentCase?.documents} />
                 </div>
                 <div className={classes.footer}>
-                  <Button
-                    aspect="primary"
-                    components="icon"
-                    onClick={() => handleProcessStart()}
-                  >
-                    Incepe proces
-                    <ChevronRight size={16} />
-                  </Button>
+          
                 </div>
               </div>
             </div>
